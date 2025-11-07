@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
+  <ORMModel ModelId="4e6252e6-1ce6-4f22-810d-f08f9fb19313" Name="Test30-RoleConstraint-JoinSubsetConstraint-CinemaBookings-NORMACreatedSubsetConstraint" CoreVersionNumber="2.6">
+    <ValueTypes>
+      <ValueType Id="Cinema_Id" GUID="_37398BE6-EAD7-4904-A0FE-BE6161510B39" Name="Cinema_Id" DBName="" DataType="NumericAutoCounter" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="DateTime" GUID="_9971858D-E523-4717-BFB4-D0CDEC067D3B" Name="DateTime" DBName="" DataType="TemporalDateAndTime" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Film_Id" GUID="_37591A66-2CE7-4058-95D7-BC9CE3C6DB1F" Name="Film_Id" DBName="" DataType="NumericAutoCounter" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Letter" GUID="_3512197A-5762-48A7-8262-2B269EDBF784" Name="Letter" DBName="" DataType="TextFixedLength" DataTypePrecision="0" DataTypeLength="1" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Person_Id" GUID="_F1BA3C62-6944-4567-A626-C57B86808986" Name="Person_Id" DBName="" DataType="NumericAutoCounter" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="RowNr" GUID="_569E1D62-A0C1-4C1B-813F-3F5F16A99387" Name="RowNr" DBName="" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+    </ValueTypes>
+    <EntityTypes>
+      <EntityType Id="Cinema" GUID="_0ADBA20E-8F24-444D-81EE-6705B612EC39" Name="Cinema" DBName="" ReferenceModeValueTypeId="Cinema_Id" ReferenceSchemeRoleConstraintId="InternalUniquenessConstraint19" IsObjectifyingEntityType="false" ReferenceMode=".Id" HideReferenceMode="true" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="Film" GUID="_DBC4D1CC-A4DB-4AB5-91EC-D6BCA96E7ABE" Name="Film" DBName="" ReferenceModeValueTypeId="Film_Id" ReferenceSchemeRoleConstraintId="InternalUniquenessConstraint21" IsObjectifyingEntityType="false" ReferenceMode=".Id" HideReferenceMode="true" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="Person" GUID="_4EDE4D02-9FA0-4979-8778-DFB34E6B8C82" Name="Person" DBName="" ReferenceModeValueTypeId="Person_Id" ReferenceSchemeRoleConstraintId="InternalUniquenessConstraint15" IsObjectifyingEntityType="false" ReferenceMode=".Id" HideReferenceMode="true" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="Row" GUID="_703A2D00-C20C-4CD5-B90C-6978140F94B6" Name="Row" DBName="" ReferenceSchemeRoleConstraintId="ExternalUniquenessConstraint" IsObjectifyingEntityType="false" ReferenceMode="" HideReferenceMode="false" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="Seat" GUID="_A391A449-B86F-462B-8712-94053DFC9FC9" Name="Seat" DBName="" ReferenceSchemeRoleConstraintId="ExternalUniquenessConstraint2" IsObjectifyingEntityType="false" ReferenceMode="" HideReferenceMode="false" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="Session" GUID="da35a8c1-990f-4ca2-8812-51c0af7b26bf" Name="Session" DBName="" ReferenceSchemeRoleConstraintId="" IsObjectifyingEntityType="true" ReferenceMode="" HideReferenceMode="false" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="Booking" GUID="_469480D8-A848-4B75-A7FC-E8288FEED7F6" Name="Booking" DBName="" ReferenceSchemeRoleConstraintId="" IsObjectifyingEntityType="true" ReferenceMode="" HideReferenceMode="true" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="SeatIsForBooking" GUID="_D1E4EBEF-BAD2-4548-8BE2-48CFE55D4378" Name="SeatIsForBooking" DBName="" ReferenceSchemeRoleConstraintId="" IsObjectifyingEntityType="true" ReferenceMode="" HideReferenceMode="false" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+    </EntityTypes>
+    <FactTypes>
+      <FactType Id="Session" GUID="3eb933f3-599c-44d0-b2aa-1587f57c9e9b" Name="Session" DBName="" ObjectifyingEntityTypeId="Session" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="true" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_CFF6E461-965B-4591-87B6-ECE72653F413" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Film">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_54DC875B-578A-4725-B6D6-E307873A1DA9" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="DateTime">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_9D8306D2-B2B6-41B0-ADB2-4AC470506B17" Name="" SequenceNr="3" Mandatory="false" JoinedObjectTypeId="Cinema">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="3a56b49f-c932-4709-880a-86abb323003d" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_CFF6E461-965B-4591-87B6-ECE72653F413" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is showing on</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_54DC875B-578A-4725-B6D6-E307873A1DA9" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>at</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="3" Role_Id="_9D8306D2-B2B6-41B0-ADB2-4AC470506B17" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="Booking" GUID="03467832-7977-4cf7-8054-2d9e7df24c90" Name="Booking" DBName="" ObjectifyingEntityTypeId="Booking" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="true" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_A2FEA51A-A458-4B74-8A0C-989E441AC80C" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Person">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_324AB8B3-412A-4D48-944A-B8C6DDF1F8AF" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Session">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="ff70d8a9-b6ba-4286-a490-61ecdb3f24c9" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_A2FEA51A-A458-4B74-8A0C-989E441AC80C" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>booked</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_324AB8B3-412A-4D48-944A-B8C6DDF1F8AF" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="SeatIsForBooking" GUID="104a3fd4-3fc9-4577-97e4-35d77d7cffc7" Name="SeatIsForBooking" DBName="" ObjectifyingEntityTypeId="SeatIsForBooking" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_D91E722D-CC66-4CA3-94D5-F525C6B1A467" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Booking">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_E7646686-FD06-4564-AEA0-8BC7DBCFA3FF" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Seat">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="8cdfab20-835e-4e7c-9de5-e7eed69295c8" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_E7646686-FD06-4564-AEA0-8BC7DBCFA3FF" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is for</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_D91E722D-CC66-4CA3-94D5-F525C6B1A467" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="33ba81e1-2b97-4b66-87f6-747a8c495c70" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_D91E722D-CC66-4CA3-94D5-F525C6B1A467" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_E7646686-FD06-4564-AEA0-8BC7DBCFA3FF" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="SeatHasLetter" GUID="a9ad6d29-7f8b-4c6b-bb53-a7c8d24b3198" Name="SeatHasLetter" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_9F3A0F53-FB73-46E9-9E95-E6C4BC877E2B" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Letter">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_0BFEFCAC-65AE-45A1-9468-21CD3D04CF75" Name="" SequenceNr="2" Mandatory="true" JoinedObjectTypeId="Seat">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="1be74f5e-dcdf-43fb-9973-9b992e055579" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_0BFEFCAC-65AE-45A1-9468-21CD3D04CF75" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_9F3A0F53-FB73-46E9-9E95-E6C4BC877E2B" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="RowHasRowNr" GUID="7080dd29-868a-4d8c-8072-047e9f848cda" Name="RowHasRowNr" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_413274CE-71D6-4BA5-A58B-9A4FBB2A8341" Name="" SequenceNr="1" Mandatory="true" JoinedObjectTypeId="Row">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_5FDA8E4F-6C61-45D5-B1F5-22FF6C4B1C25" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="RowNr">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="e69258c2-d9d9-490f-8405-59d78e0676d5" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_413274CE-71D6-4BA5-A58B-9A4FBB2A8341" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_5FDA8E4F-6C61-45D5-B1F5-22FF6C4B1C25" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="CinemaContainsRow" GUID="f83357bd-c45a-40c2-927e-8b202b7e82e4" Name="CinemaContainsRow" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_B61AD525-CE68-4D89-B0D3-CD4CA67AAA6E" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Cinema">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_0D3BEB20-C2E3-4842-901D-E4CB4FB6294C" Name="" SequenceNr="2" Mandatory="true" JoinedObjectTypeId="Row">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="425c6aa0-fdcb-4d36-83ce-568b31a63a53" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_B61AD525-CE68-4D89-B0D3-CD4CA67AAA6E" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>contains</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_0D3BEB20-C2E3-4842-901D-E4CB4FB6294C" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="7643f19f-0cc7-48af-ae70-f290b50d5de0" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_0D3BEB20-C2E3-4842-901D-E4CB4FB6294C" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is in</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_B61AD525-CE68-4D89-B0D3-CD4CA67AAA6E" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="PersonHasPersonId" GUID="7922cefe-671a-4614-9152-3c06a6bcc41a" Name="PersonHasPersonId" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="true" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_9AC2393F-3262-417F-BF03-0B7917B69F70" Name="" SequenceNr="1" Mandatory="true" JoinedObjectTypeId="Person">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_EDC5B0AC-B007-4FEB-89FE-A6A995D9959F" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Person_Id">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="865c4c03-c686-461d-89c3-bda95edd54a7" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_9AC2393F-3262-417F-BF03-0B7917B69F70" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_EDC5B0AC-B007-4FEB-89FE-A6A995D9959F" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="e55be414-52f0-4423-b12f-b123b0aa4e2e" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_EDC5B0AC-B007-4FEB-89FE-A6A995D9959F" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is of</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_9AC2393F-3262-417F-BF03-0B7917B69F70" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="FilmIdIsOfFilm" GUID="8fdc4e1b-a535-4c78-98f9-183f1b167326" Name="FilmIdIsOfFilm" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="true" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_A72B7E4C-6515-4FD8-A733-1558146F168C" Name="" SequenceNr="1" Mandatory="true" JoinedObjectTypeId="Film">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_057F3D22-7476-436F-B899-E893BB016496" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Film_Id">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="00a3cfbb-6fdd-4072-922d-24a69c6dc8c1" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_057F3D22-7476-436F-B899-E893BB016496" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is of</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_A72B7E4C-6515-4FD8-A733-1558146F168C" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="3a3b21c1-fc49-40b0-8dcd-9ce0dccc4875" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_A72B7E4C-6515-4FD8-A733-1558146F168C" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_057F3D22-7476-436F-B899-E893BB016496" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="CinemaIdIsOfCinema" GUID="1d034b20-91d2-40f6-96b9-dd1f923635ce" Name="CinemaIdIsOfCinema" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="true" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_CDA8FCC0-2E2B-4F65-BCA1-A7245EBD38CF" Name="" SequenceNr="1" Mandatory="true" JoinedObjectTypeId="Cinema">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_01A566BA-F338-4AF4-B255-4F5272372C20" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Cinema_Id">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="d066683c-986d-4fb7-8bd7-4e0852ef41a5" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_01A566BA-F338-4AF4-B255-4F5272372C20" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is of</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_CDA8FCC0-2E2B-4F65-BCA1-A7245EBD38CF" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="4cb81000-087c-47c8-b144-bb71e065ab5a" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_CDA8FCC0-2E2B-4F65-BCA1-A7245EBD38CF" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_01A566BA-F338-4AF4-B255-4F5272372C20" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="SeatIsInRow" GUID="841bd3a4-1ce9-4365-9f41-45febce7f0aa" Name="SeatIsInRow" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_420DA445-1843-466F-B909-8B5F8C162B19" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Row">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_ADDAA6E3-F992-4451-BBE3-2F0564BAB4D1" Name="" SequenceNr="2" Mandatory="true" JoinedObjectTypeId="Seat">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="6bd834cd-7826-4c8b-8fb9-12e2e401db20" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_ADDAA6E3-F992-4451-BBE3-2F0564BAB4D1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is in</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_420DA445-1843-466F-B909-8B5F8C162B19" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="6c849166-c536-4097-992f-f062124bb4df" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_420DA445-1843-466F-B909-8B5F8C162B19" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>contains</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_ADDAA6E3-F992-4451-BBE3-2F0564BAB4D1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="SessionBooking" GUID="f5ec4132-debc-41c0-ba31-1f2085e8c267" Name="SessionBooking" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="true" LinkFactTypeRoleId="_324AB8B3-412A-4D48-944A-B8C6DDF1F8AF" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_BF1C060D-FDCD-459B-80B7-0187D8BD1A3B" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Booking">
+            <ValueConstraint />
+          </Role>
+          <Role Id="a2112915-9fd0-4eb0-8654-e60159cbf63b" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Session">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="3fa8a539-4d87-4b7e-8b24-8da7882c0d34" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_BF1C060D-FDCD-459B-80B7-0187D8BD1A3B" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>involves</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="a2112915-9fd0-4eb0-8654-e60159cbf63b" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="25c5776f-5ae7-4de1-a7ec-2e4975f3cfbb" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="a2112915-9fd0-4eb0-8654-e60159cbf63b" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is involved in</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_BF1C060D-FDCD-459B-80B7-0187D8BD1A3B" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="DateTimeSession" GUID="2904f4cf-5b6a-42ff-8dd3-3dd1943c0a75" Name="DateTimeSession" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="true" LinkFactTypeRoleId="_54DC875B-578A-4725-B6D6-E307873A1DA9" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_51D5463C-EA9C-4D06-ADE5-AAE34B11B653" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Session">
+            <ValueConstraint />
+          </Role>
+          <Role Id="ecc6f6ad-38e3-4ff9-84c4-2dc4d009941f" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="DateTime">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="ad5e06fd-ed0b-447f-8142-b677dc812190" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_51D5463C-EA9C-4D06-ADE5-AAE34B11B653" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>involves</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="ecc6f6ad-38e3-4ff9-84c4-2dc4d009941f" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="9ea4db3f-d928-4a34-bf3f-a9c07ac9bf49" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="ecc6f6ad-38e3-4ff9-84c4-2dc4d009941f" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is involved in</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_51D5463C-EA9C-4D06-ADE5-AAE34B11B653" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="CinemaSession" GUID="667fd60d-113a-47db-a4ce-204fcfa6e64d" Name="CinemaSession" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="true" LinkFactTypeRoleId="_9D8306D2-B2B6-41B0-ADB2-4AC470506B17" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_21FB4AE1-6723-43BC-A39B-FBD3B5AF868E" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Session">
+            <ValueConstraint />
+          </Role>
+          <Role Id="e410a01b-02a4-4e53-b9ed-c9a203feb214" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Cinema">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="938be891-ef94-4511-bde4-f7c7407b0189" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_21FB4AE1-6723-43BC-A39B-FBD3B5AF868E" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>involves</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="e410a01b-02a4-4e53-b9ed-c9a203feb214" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="6fee7462-1451-463f-b0ef-d91a269cee67" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="e410a01b-02a4-4e53-b9ed-c9a203feb214" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is involved in</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_21FB4AE1-6723-43BC-A39B-FBD3B5AF868E" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="FilmSession" GUID="5aa42028-11c1-4c6a-9dfc-507ceebae58e" Name="FilmSession" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="true" LinkFactTypeRoleId="_CFF6E461-965B-4591-87B6-ECE72653F413" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_ED297E3E-DDDA-4F23-9A1B-C3CD50E035BF" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Session">
+            <ValueConstraint />
+          </Role>
+          <Role Id="dbadd7fd-1cd2-4496-8137-7108b8bedcd9" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Film">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="df3097d6-39f4-42e4-8929-cdd7065c8397" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_ED297E3E-DDDA-4F23-9A1B-C3CD50E035BF" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>involves</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="dbadd7fd-1cd2-4496-8137-7108b8bedcd9" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="fbe141ba-d4f5-477e-b8ad-ddb20c307437" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="dbadd7fd-1cd2-4496-8137-7108b8bedcd9" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is involved in</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_ED297E3E-DDDA-4F23-9A1B-C3CD50E035BF" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="PersonBooking" GUID="43031ac3-9ec3-4c50-9742-ce6d0d4538d9" Name="PersonBooking" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="true" LinkFactTypeRoleId="_A2FEA51A-A458-4B74-8A0C-989E441AC80C" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_6DD47D56-A98D-430B-9671-AE745D023DD5" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Booking">
+            <ValueConstraint />
+          </Role>
+          <Role Id="058183e9-35f7-4486-b979-660b14e2c79b" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Person">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="e674e160-ae86-4e82-9e1d-bfd62b81087f" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_6DD47D56-A98D-430B-9671-AE745D023DD5" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>involves</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="058183e9-35f7-4486-b979-660b14e2c79b" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="30593ee7-7ef3-439f-8f8c-31ccb162813d" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="058183e9-35f7-4486-b979-660b14e2c79b" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is involved in</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_6DD47D56-A98D-430B-9671-AE745D023DD5" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+    </FactTypes>
+    <RoleConstraints>
+      <RoleConstraint Id="InternalUniquenessConstraint18" GUID="_24514FD5-FE7A-4186-BE87-EDC60AF411FD" Name="InternalUniquenessConstraint18" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_CDA8FCC0-2E2B-4F65-BCA1-A7245EBD38CF" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint19" GUID="_44CBDC50-CA60-4F08-A7D9-1A969BF1C120" Name="InternalUniquenessConstraint19" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_01A566BA-F338-4AF4-B255-4F5272372C20" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint20" GUID="_218A2376-5863-444E-AE43-8FA7B4E5E312" Name="InternalUniquenessConstraint20" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_A72B7E4C-6515-4FD8-A733-1558146F168C" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint21" GUID="_DFB78E88-C3D6-44FC-801C-16BF0F280E47" Name="InternalUniquenessConstraint21" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_057F3D22-7476-436F-B899-E893BB016496" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint14" GUID="_EA35B0E7-77AE-4671-9F91-52885815683A" Name="InternalUniquenessConstraint14" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_9AC2393F-3262-417F-BF03-0B7917B69F70" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint15" GUID="_D5AF6D41-D392-4B07-BBF1-167DBCB99879" Name="InternalUniquenessConstraint15" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_EDC5B0AC-B007-4FEB-89FE-A6A995D9959F" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint4" GUID="_DCF58BFC-C8F9-4018-894D-F6233FBE80C2" Name="InternalUniquenessConstraint4" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_CFF6E461-965B-4591-87B6-ECE72653F413" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+          <RoleConstraintRole RoleId="_54DC875B-578A-4725-B6D6-E307873A1DA9" SequenceNr="2" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+          <RoleConstraintRole RoleId="_9D8306D2-B2B6-41B0-ADB2-4AC470506B17" SequenceNr="3" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint8" GUID="e9ce7d26-b9df-4684-9c60-6e49fb9df5e5" Name="InternalUniquenessConstraint8" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_ED297E3E-DDDA-4F23-9A1B-C3CD50E035BF" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint9" GUID="78f9543f-cd7e-42d4-adbc-c7511ce2d65f" Name="InternalUniquenessConstraint9" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_51D5463C-EA9C-4D06-ADE5-AAE34B11B653" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint10" GUID="39e33620-ab79-457c-b325-78dbe17f9976" Name="InternalUniquenessConstraint10" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_21FB4AE1-6723-43BC-A39B-FBD3B5AF868E" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint13" GUID="_67150E93-6E69-471E-A4E6-D74A943A9A22" Name="InternalUniquenessConstraint13" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_A2FEA51A-A458-4B74-8A0C-989E441AC80C" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+          <RoleConstraintRole RoleId="_324AB8B3-412A-4D48-944A-B8C6DDF1F8AF" SequenceNr="2" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint12" GUID="0c7a29b8-8227-4847-9833-f57e08da1d6e" Name="InternalUniquenessConstraint12" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_6DD47D56-A98D-430B-9671-AE745D023DD5" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint16" GUID="aa6cfa69-f7d4-4070-98f3-0ba4caf920ad" Name="InternalUniquenessConstraint16" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_BF1C060D-FDCD-459B-80B7-0187D8BD1A3B" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint17" GUID="_A7502773-0E9D-47C6-8308-A3A97AAC47D7" Name="InternalUniquenessConstraint17" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_0D3BEB20-C2E3-4842-901D-E4CB4FB6294C" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint102" GUID="_59051FA5-E182-4B07-BFD5-3EC7C48B2DA5" Name="InternalUniquenessConstraint102" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_413274CE-71D6-4BA5-A58B-9A4FBB2A8341" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint122" GUID="_50F00CD4-D1BA-4F53-A4A6-9132152B982D" Name="InternalUniquenessConstraint122" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_0BFEFCAC-65AE-45A1-9468-21CD3D04CF75" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint162" GUID="_839490FA-A24B-4C48-A76C-79E23D30704E" Name="InternalUniquenessConstraint162" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_D91E722D-CC66-4CA3-94D5-F525C6B1A467" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+          <RoleConstraintRole RoleId="_E7646686-FD06-4564-AEA0-8BC7DBCFA3FF" SequenceNr="2" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint11" GUID="_C28BC713-7768-4B77-A279-393B5D8C1EC1" Name="InternalUniquenessConstraint11" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_ADDAA6E3-F992-4451-BBE3-2F0564BAB4D1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="ExternalUniquenessConstraint" GUID="_37C5DB28-2DB2-4F7A-B2AC-F42F038674B5" Name="ExternalUniquenessConstraint" RoleConstraintType="ExternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_B61AD525-CE68-4D89-B0D3-CD4CA67AAA6E" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+          <RoleConstraintRole RoleId="_5FDA8E4F-6C61-45D5-B1F5-22FF6C4B1C25" SequenceNr="2" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="ExternalUniquenessConstraint2" GUID="_0CBB6EE3-B524-44CB-8EDE-FA752E96F55C" Name="ExternalUniquenessConstraint2" RoleConstraintType="ExternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_420DA445-1843-466F-B909-8B5F8C162B19" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+          <RoleConstraintRole RoleId="_9F3A0F53-FB73-46E9-9E95-E6C4BC877E2B" SequenceNr="2" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="SubsetConstraint1" GUID="_22DD67C2-45B8-4909-B21A-1B83F5B58C63" Name="SubsetConstraint1" RoleConstraintType="SubsetConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_D91E722D-CC66-4CA3-94D5-F525C6B1A467" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+          <RoleConstraintRole RoleId="_E7646686-FD06-4564-AEA0-8BC7DBCFA3FF" SequenceNr="2" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+          <RoleConstraintRole RoleId="_BF1C060D-FDCD-459B-80B7-0187D8BD1A3B" SequenceNr="3" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+          <RoleConstraintRole RoleId="_ADDAA6E3-F992-4451-BBE3-2F0564BAB4D1" SequenceNr="4" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument>
+          <RoleConstraintArgument SequenceNr="1">
+            <Role>
+              <RoleReference RoleId="_D91E722D-CC66-4CA3-94D5-F525C6B1A467" />
+              <RoleReference RoleId="_E7646686-FD06-4564-AEA0-8BC7DBCFA3FF" />
+            </Role>
+            <JoinPath JoinPathError="None">
+              <RolePath>
+                <RoleReference RoleId="_D91E722D-CC66-4CA3-94D5-F525C6B1A467" />
+                <RoleReference RoleId="_E7646686-FD06-4564-AEA0-8BC7DBCFA3FF" />
+              </RolePath>
+            </JoinPath>
+          </RoleConstraintArgument>
+          <RoleConstraintArgument SequenceNr="2">
+            <Role>
+              <RoleReference RoleId="_BF1C060D-FDCD-459B-80B7-0187D8BD1A3B" />
+              <RoleReference RoleId="_ADDAA6E3-F992-4451-BBE3-2F0564BAB4D1" />
+            </Role>
+            <JoinPath JoinPathError="None">
+              <RolePath>
+                <RoleReference RoleId="_BF1C060D-FDCD-459B-80B7-0187D8BD1A3B" />
+                <RoleReference RoleId="a2112915-9fd0-4eb0-8654-e60159cbf63b" />
+                <RoleReference RoleId="_21FB4AE1-6723-43BC-A39B-FBD3B5AF868E" />
+                <RoleReference RoleId="e410a01b-02a4-4e53-b9ed-c9a203feb214" />
+                <RoleReference RoleId="_B61AD525-CE68-4D89-B0D3-CD4CA67AAA6E" />
+                <RoleReference RoleId="_0D3BEB20-C2E3-4842-901D-E4CB4FB6294C" />
+                <RoleReference RoleId="_420DA445-1843-466F-B909-8B5F8C162B19" />
+                <RoleReference RoleId="_ADDAA6E3-F992-4451-BBE3-2F0564BAB4D1" />
+              </RolePath>
+            </JoinPath>
+          </RoleConstraintArgument>
+        </Argument>
+        <ValueConstraint />
+      </RoleConstraint>
+    </RoleConstraints>
+    <ModelNotes />
+    <Synonyms />
+  </ORMModel>
+  <ORMDiagram>
+    <Page Id="_23E3D722-B2A1-4761-A074-BB382AFBBCFB" Name="New Model Page 1" Language="ORMModel" IsCoreModelPage="false">
+      <ConceptInstance>
+        <ConceptInstance Symbol="Film" ConceptType="EntityType" RoleId="NotUsed" X="86" Y="84" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+          <ConceptInstanceFlag Symbol="Film" ConceptType="EntityType" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1" Flag="EntityTypeHideReferenceMode">
+            <isDirty>true</isDirty>
+          </ConceptInstanceFlag>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Cinema" ConceptType="EntityType" RoleId="NotUsed" X="183" Y="43" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+          <ConceptInstanceFlag Symbol="Cinema" ConceptType="EntityType" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1" Flag="EntityTypeHideReferenceMode">
+            <isDirty>true</isDirty>
+          </ConceptInstanceFlag>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Row" ConceptType="EntityType" RoleId="NotUsed" X="251" Y="52" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Seat" ConceptType="EntityType" RoleId="NotUsed" X="297" Y="97" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Person" ConceptType="EntityType" RoleId="NotUsed" X="108" Y="125" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+          <ConceptInstanceFlag Symbol="Person" ConceptType="EntityType" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1" Flag="EntityTypeHideReferenceMode">
+            <isDirty>true</isDirty>
+          </ConceptInstanceFlag>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Session" ConceptType="EntityType" RoleId="NotUsed" X="10" Y="10" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Booking" ConceptType="EntityType" RoleId="NotUsed" X="10" Y="10" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="SeatIsForBooking" ConceptType="EntityType" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="DateTime" ConceptType="ValueType" RoleId="NotUsed" X="138" Y="4" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="RowNr" ConceptType="ValueType" RoleId="NotUsed" X="288" Y="13" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Letter" ConceptType="ValueType" RoleId="NotUsed" X="329" Y="49" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Session" ConceptType="FactType" RoleId="NotUsed" X="129" Y="48" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Session" ConceptType="FactTypeReading" RoleId="NotUsed" X="133" Y="62" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Session" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="DateTimeSession" ConceptType="FactType" RoleId="NotUsed" X="127" Y="22" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="DateTimeSession" ConceptType="FactTypeReading" RoleId="NotUsed" X="139" Y="36" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="DateTimeSession" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="FilmSession" ConceptType="FactType" RoleId="NotUsed" X="104" Y="33" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="FilmSession" ConceptType="FactTypeReading" RoleId="NotUsed" X="114" Y="45" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="FilmSession" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="CinemaSession" ConceptType="FactType" RoleId="NotUsed" X="167" Y="56" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="CinemaSession" ConceptType="FactTypeReading" RoleId="NotUsed" X="175" Y="71" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="CinemaSession" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="CinemaContainsRow" ConceptType="FactType" RoleId="NotUsed" X="221" Y="34" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="CinemaContainsRow" ConceptType="FactTypeReading" RoleId="NotUsed" X="221" Y="43" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="CinemaContainsRow" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="RowHasRowNr" ConceptType="FactType" RoleId="NotUsed" X="270" Y="33" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="RowHasRowNr" ConceptType="FactTypeReading" RoleId="NotUsed" X="270" Y="41" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="RowHasRowNr" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="SeatIsInRow" ConceptType="FactType" RoleId="NotUsed" X="276" Y="72" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="SeatIsInRow" ConceptType="FactTypeReading" RoleId="NotUsed" X="276" Y="81" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="SeatIsInRow" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="SeatHasLetter" ConceptType="FactType" RoleId="NotUsed" X="323" Y="67" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="SeatHasLetter" ConceptType="FactTypeReading" RoleId="NotUsed" X="323" Y="76" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="SeatHasLetter" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Booking" ConceptType="FactType" RoleId="NotUsed" X="142" Y="89" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Booking" ConceptType="FactTypeReading" RoleId="NotUsed" X="144" Y="104" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Booking" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="SeatIsForBooking" ConceptType="FactType" RoleId="NotUsed" X="212" Y="107" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="SeatIsForBooking" ConceptType="FactTypeReading" RoleId="NotUsed" X="212" Y="115" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="SeatIsForBooking" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="SessionBooking" ConceptType="FactType" RoleId="NotUsed" X="129" Y="67" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="SessionBooking" ConceptType="FactTypeReading" RoleId="NotUsed" X="138" Y="81" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="SessionBooking" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint4" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint9" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint8" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint10" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint17" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint102" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint11" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint122" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint13" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint162" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint16" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="ExternalUniquenessConstraint" ConceptType="RoleConstraint" RoleId="NotUsed" X="244" Y="18" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="ExternalUniquenessConstraint2" ConceptType="RoleConstraint" RoleId="NotUsed" X="297" Y="62" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="SubsetConstraint1" ConceptType="RoleConstraint" RoleId="NotUsed" X="214" Y="80" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+      </ConceptInstance>
+    </Page>
+  </ORMDiagram>
+</Model>

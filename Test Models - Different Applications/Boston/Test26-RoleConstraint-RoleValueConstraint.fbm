@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
+  <ORMModel ModelId="Test26-RoleConstraint-RoleValueConstraint" Name="Test26-RoleConstraint-RoleValueConstraint" CoreVersionNumber="2.6">
+    <ValueTypes>
+      <ValueType Id="Bin_Nr" GUID="_33F155A8-722E-4788-BDC9-745D117E46BE" Name="Bin_Nr" DBName="" DataType="NumericSignedInteger" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Part_Nr" GUID="_261ECAFC-F6F6-4600-84E4-6776C26BFEC5" Name="Part_Nr" DBName="" DataType="NumericSignedInteger" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Quantity" GUID="_57DA591B-6EC6-4E02-AD77-922E5019245E" Name="Quantity" DBName="" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Warehouse_Name" GUID="_2752A734-787F-4A0A-9AF3-B34B42A9D2E3" Name="Warehouse_Name" DBName="" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+    </ValueTypes>
+    <EntityTypes>
+      <EntityType Id="Bin" GUID="_8891BF55-9C26-4D64-B30C-8C001B5BDA74" Name="Bin" DBName="" ReferenceModeValueTypeId="Bin_Nr" ReferenceSchemeRoleConstraintId="InternalUniquenessConstraint7" IsObjectifyingEntityType="false" ReferenceMode=".Nr" HideReferenceMode="true" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="Part" GUID="_9E1AAE9F-4693-44C7-9844-6DD212F107D0" Name="Part" DBName="" ReferenceModeValueTypeId="Part_Nr" ReferenceSchemeRoleConstraintId="InternalUniquenessConstraint5" IsObjectifyingEntityType="false" ReferenceMode=".Nr" HideReferenceMode="true" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="Warehouse" GUID="_24951B94-62DB-4E9D-93DB-388C6600EA32" Name="Warehouse" DBName="" ReferenceModeValueTypeId="Warehouse_Name" ReferenceSchemeRoleConstraintId="InternalUniquenessConstraint9" IsObjectifyingEntityType="false" ReferenceMode=".Name" HideReferenceMode="true" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="StockedItem" GUID="_E73E7BA3-D6A4-4FB9-B39B-1B197F3F4D44" Name="StockedItem" DBName="" ReferenceSchemeRoleConstraintId="" IsObjectifyingEntityType="true" ReferenceMode="" HideReferenceMode="true" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+    </EntityTypes>
+    <FactTypes>
+      <FactType Id="StockedItem" GUID="20757336-cb9b-41c3-9c8d-b6ab5e5cb259" Name="StockedItem" DBName="" ObjectifyingEntityTypeId="StockedItem" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="true" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_FE18A959-A251-461E-A2FB-35A29D442C72" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Part">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_FF185471-1082-4BBD-83E0-361D9E89BE54" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Bin">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_97C5A67E-7CE2-4593-BB2F-075E69CD0008" Name="" SequenceNr="3" Mandatory="false" JoinedObjectTypeId="Warehouse">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="94ff3133-0b60-40e6-bc7a-5f70720ae4f0" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_FE18A959-A251-461E-A2FB-35A29D442C72" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is in</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_FF185471-1082-4BBD-83E0-361D9E89BE54" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>in</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="3" Role_Id="_97C5A67E-7CE2-4593-BB2F-075E69CD0008" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="WarehouseHasWarehouseName" GUID="bdf0b765-1e83-4091-997a-af8b9c9d306d" Name="WarehouseHasWarehouseName" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="true" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_EBA757FC-EFF2-4289-AF78-9D1BF3730C81" Name="" SequenceNr="1" Mandatory="true" JoinedObjectTypeId="Warehouse">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_937E1E78-4B06-440A-A6C0-45D03DC5D952" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Warehouse_Name">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="d19d3487-2759-4502-ad66-be3d162640c8" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_EBA757FC-EFF2-4289-AF78-9D1BF3730C81" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_937E1E78-4B06-440A-A6C0-45D03DC5D952" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="06b45d43-4248-4b72-8add-6ded38a5b70c" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_937E1E78-4B06-440A-A6C0-45D03DC5D952" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is of</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_EBA757FC-EFF2-4289-AF78-9D1BF3730C81" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="PartHasPartNr" GUID="56a855a0-2344-46e9-86c5-4b86aac7cf19" Name="PartHasPartNr" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="true" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_154B3D18-0E41-4E43-8176-5E803523500E" Name="" SequenceNr="1" Mandatory="true" JoinedObjectTypeId="Part">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_F62B0476-FC66-4ADC-90CF-B337455AE7C3" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Part_Nr">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="060b6e74-d8f0-4130-9591-a8eb33a6d25b" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_154B3D18-0E41-4E43-8176-5E803523500E" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_F62B0476-FC66-4ADC-90CF-B337455AE7C3" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="a3711e52-1e8b-480e-93b6-b3380597b2ce" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_F62B0476-FC66-4ADC-90CF-B337455AE7C3" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is of</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_154B3D18-0E41-4E43-8176-5E803523500E" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="BinHasBinNr" GUID="d4159965-76a9-47cf-b1ce-04dc528d1c8b" Name="BinHasBinNr" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="true" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_BCDF98FD-850B-4268-8C3D-E96C78913AA0" Name="" SequenceNr="1" Mandatory="true" JoinedObjectTypeId="Bin">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_61D26201-D054-440D-9D0E-9D98B4A6EBF4" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Bin_Nr">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="d6ad1243-f359-4f81-8169-832f933fdbc0" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_BCDF98FD-850B-4268-8C3D-E96C78913AA0" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_61D26201-D054-440D-9D0E-9D98B4A6EBF4" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="ef4ff20c-e6b7-46b9-a4fa-f6e1539f4eda" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_61D26201-D054-440D-9D0E-9D98B4A6EBF4" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is of</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_BCDF98FD-850B-4268-8C3D-E96C78913AA0" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="StockedItemIsInQuantity" GUID="75e84315-d25c-47ee-9ee6-fdb898ac3a39" Name="StockedItemIsInQuantity" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_0A736052-FDC1-4375-9ACF-C0CA0FAC88F5" Name="" SequenceNr="1" Mandatory="true" JoinedObjectTypeId="StockedItem">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_B2A3E562-AC68-48FC-91AD-C93C5673390A" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Quantity">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="f75b70de-3421-4eb0-b026-3df4764970ca" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_0A736052-FDC1-4375-9ACF-C0CA0FAC88F5" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is in</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_B2A3E562-AC68-48FC-91AD-C93C5673390A" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="WarehouseStockedItem" GUID="a7fff4dc-47a5-4749-944e-983a309bf48d" Name="WarehouseStockedItem" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="true" LinkFactTypeRoleId="_97C5A67E-7CE2-4593-BB2F-075E69CD0008" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_B637A450-F5D0-4B94-A2AD-99497C8CCC88" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="StockedItem">
+            <ValueConstraint />
+          </Role>
+          <Role Id="a53d90bd-ebaf-4f2d-b185-824094d4b5de" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Warehouse">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="2ae621b5-5aed-4e34-8267-861bab43b8e9" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_B637A450-F5D0-4B94-A2AD-99497C8CCC88" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>involves</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="a53d90bd-ebaf-4f2d-b185-824094d4b5de" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="3a5f8055-e3d0-4ce6-ac61-97ea16e63dfd" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="a53d90bd-ebaf-4f2d-b185-824094d4b5de" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is involved in</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_B637A450-F5D0-4B94-A2AD-99497C8CCC88" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="PartStockedItem" GUID="1575bc9d-4456-4647-8b46-df895a2b2e89" Name="PartStockedItem" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="true" LinkFactTypeRoleId="_FE18A959-A251-461E-A2FB-35A29D442C72" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_FD958530-13CB-4C31-9333-C19D31A23AF6" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="StockedItem">
+            <ValueConstraint />
+          </Role>
+          <Role Id="18d45922-cad9-4fed-bc88-1e1ed90c7b5b" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Part">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="ffd5f03f-5de4-4ad7-9689-4862d954e314" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_FD958530-13CB-4C31-9333-C19D31A23AF6" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>involves</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="18d45922-cad9-4fed-bc88-1e1ed90c7b5b" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="2cbb5997-0abc-497f-a1e7-00ba9e71bf4e" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="18d45922-cad9-4fed-bc88-1e1ed90c7b5b" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is involved in</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_FD958530-13CB-4C31-9333-C19D31A23AF6" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="BinStockedItem" GUID="5d226334-164b-4ace-816a-c9de1a48b27d" Name="BinStockedItem" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="true" LinkFactTypeRoleId="_FF185471-1082-4BBD-83E0-361D9E89BE54" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_ACED8722-D9F6-45CA-A25B-3F6FDB3055CE" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="StockedItem">
+            <ValueConstraint />
+          </Role>
+          <Role Id="c874631b-cd25-4ae5-b1c6-f3770e3296a2" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Bin">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="51d7e5a7-7d06-4df6-b9c3-39ab7ec64631" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_ACED8722-D9F6-45CA-A25B-3F6FDB3055CE" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>involves</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="c874631b-cd25-4ae5-b1c6-f3770e3296a2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="2394310c-d87f-47e6-a4a6-15c36817ad54" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="c874631b-cd25-4ae5-b1c6-f3770e3296a2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is involved in</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_ACED8722-D9F6-45CA-A25B-3F6FDB3055CE" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+    </FactTypes>
+    <RoleConstraints>
+      <RoleConstraint Id="InternalUniquenessConstraint7" GUID="_E98202B9-5B9E-492D-A678-48217E12830A" Name="InternalUniquenessConstraint7" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_61D26201-D054-440D-9D0E-9D98B4A6EBF4" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint8" GUID="_1E36C3B6-E3F9-4520-A898-291E2B6ADA25" Name="InternalUniquenessConstraint8" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_BCDF98FD-850B-4268-8C3D-E96C78913AA0" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint5" GUID="_DAC726DB-A417-4CF3-85A7-CAC6FBB0548B" Name="InternalUniquenessConstraint5" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_F62B0476-FC66-4ADC-90CF-B337455AE7C3" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint6" GUID="_D82B4B11-F0EA-4B1B-BBFF-C6B9D69F6125" Name="InternalUniquenessConstraint6" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_154B3D18-0E41-4E43-8176-5E803523500E" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint9" GUID="_395E0D22-EC02-45CF-A12B-BC8E5E968956" Name="InternalUniquenessConstraint9" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_937E1E78-4B06-440A-A6C0-45D03DC5D952" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint10" GUID="_D8F95141-FB0E-4DE8-9785-C0A7BF92659C" Name="InternalUniquenessConstraint10" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_EBA757FC-EFF2-4289-AF78-9D1BF3730C81" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="RoleValueConstraint1" GUID="_5D38A45B-02F4-4705-9A03-EBADED689719" Name="RoleValueConstraint1" RoleConstraintType="RoleValueConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_97C5A67E-7CE2-4593-BB2F-075E69CD0008" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint>
+          <string>Brisbane</string>
+          <string>Sydney</string>
+        </ValueConstraint>
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint4" GUID="_490D4A88-A021-40F5-AE69-1B8F81C822EB" Name="InternalUniquenessConstraint4" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_FE18A959-A251-461E-A2FB-35A29D442C72" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+          <RoleConstraintRole RoleId="_FF185471-1082-4BBD-83E0-361D9E89BE54" SequenceNr="2" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+          <RoleConstraintRole RoleId="_97C5A67E-7CE2-4593-BB2F-075E69CD0008" SequenceNr="3" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint11" GUID="753b17c6-26a0-4094-a566-0faa49e4ba73" Name="InternalUniquenessConstraint11" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_FD958530-13CB-4C31-9333-C19D31A23AF6" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint12" GUID="d21c44ee-0845-4afb-b66d-0029b9d246c5" Name="InternalUniquenessConstraint12" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_ACED8722-D9F6-45CA-A25B-3F6FDB3055CE" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint13" GUID="0c3deb7c-dd3d-492c-aa21-c72270b5fa3d" Name="InternalUniquenessConstraint13" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_B637A450-F5D0-4B94-A2AD-99497C8CCC88" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint112" GUID="_304002CB-AFA7-4287-B5B1-154FC1ADE60B" Name="InternalUniquenessConstraint112" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_0A736052-FDC1-4375-9ACF-C0CA0FAC88F5" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+    </RoleConstraints>
+    <ModelNotes />
+    <Synonyms />
+  </ORMModel>
+  <ORMDiagram>
+    <Page Id="_1310A121-33CA-4C05-ACB5-0F66EAEE20FD" Name="ORMModel2" Language="ORMModel" IsCoreModelPage="false">
+      <ConceptInstance>
+        <ConceptInstance Symbol="Part" ConceptType="EntityType" RoleId="NotUsed" X="124" Y="86" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+          <ConceptInstanceFlag Symbol="Part" ConceptType="EntityType" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1" Flag="EntityTypeHideReferenceMode">
+            <isDirty>true</isDirty>
+          </ConceptInstanceFlag>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Bin" ConceptType="EntityType" RoleId="NotUsed" X="164" Y="86" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+          <ConceptInstanceFlag Symbol="Bin" ConceptType="EntityType" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1" Flag="EntityTypeHideReferenceMode">
+            <isDirty>true</isDirty>
+          </ConceptInstanceFlag>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Warehouse" ConceptType="EntityType" RoleId="NotUsed" X="200" Y="86" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+          <ConceptInstanceFlag Symbol="Warehouse" ConceptType="EntityType" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1" Flag="EntityTypeHideReferenceMode">
+            <isDirty>true</isDirty>
+          </ConceptInstanceFlag>
+        </ConceptInstance>
+        <ConceptInstance Symbol="StockedItem" ConceptType="EntityType" RoleId="NotUsed" X="10" Y="10" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Quantity" ConceptType="ValueType" RoleId="NotUsed" X="224" Y="42" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="StockedItem" ConceptType="FactType" RoleId="NotUsed" X="156" Y="64" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="StockedItem" ConceptType="FactTypeReading" RoleId="NotUsed" X="156" Y="75" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="StockedItem" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="StockedItemIsInQuantity" ConceptType="FactType" RoleId="NotUsed" X="192" Y="40" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="StockedItemIsInQuantity" ConceptType="FactTypeReading" RoleId="NotUsed" X="192" Y="50" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="StockedItemIsInQuantity" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint4" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint112" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="RoleValueConstraint1" ConceptType="RoleConstraint" RoleId="NotUsed" X="178" Y="60" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+      </ConceptInstance>
+    </Page>
+  </ORMDiagram>
+</Model>

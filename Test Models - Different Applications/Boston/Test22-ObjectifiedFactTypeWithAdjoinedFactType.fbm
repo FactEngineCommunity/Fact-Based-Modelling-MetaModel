@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
+  <ORMModel ModelId="396a54f9-8261-41ec-a06c-41b36a450ed7" Name="Test22-ObjectifiedFactTypeWithAdjoinedFactType" CoreVersionNumber="2.6">
+    <ValueTypes>
+      <ValueType Id="Company_Id" GUID="068dded6-0523-4d28-b9c0-ec1a77cf8a67" Name="Company_Id" DBName="" DataType="NumericAutoCounter" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="true" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Date" GUID="1fc8e4cd-f7ca-4a8d-afe9-4e9bd79a111d" Name="Date" DBName="" DataType="TemporalDate" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Supplier_Id" GUID="0494126e-6b66-4204-a6f3-6ff08a66487f" Name="Supplier_Id" DBName="" DataType="NumericAutoCounter" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+    </ValueTypes>
+    <EntityTypes>
+      <EntityType Id="Company" GUID="fd94dc9e-b72f-4896-a1bd-b7f191763cd5" Name="Company" DBName="" ReferenceModeValueTypeId="Company_Id" ReferenceSchemeRoleConstraintId="InternalUniquenessConstraint2" IsObjectifyingEntityType="false" ReferenceMode=".Id" HideReferenceMode="false" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="CompanyHasSupplier" GUID="c0068394-da4a-4243-99af-04ed82272082" Name="CompanyHasSupplier" DBName="" ReferenceSchemeRoleConstraintId="" IsObjectifyingEntityType="true" ReferenceMode="" HideReferenceMode="false" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="Supplier" GUID="fdb96d18-425a-4977-831b-aa21256e1029" Name="Supplier" DBName="" ReferenceModeValueTypeId="Supplier_Id" ReferenceSchemeRoleConstraintId="InternalUniquenessConstraint4" IsObjectifyingEntityType="false" ReferenceMode=".Id" HideReferenceMode="false" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+    </EntityTypes>
+    <FactTypes>
+      <FactType Id="SupplierHasSupplier_Id" GUID="0f7a970c-e4a1-49e1-8874-147a9db866c8" Name="SupplierHasSupplier_Id" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="true" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="575f02f1-3eb9-4de7-b011-4fe6a525a5b2" Name="" SequenceNr="1" Mandatory="true" JoinedObjectTypeId="Supplier">
+            <ValueConstraint />
+          </Role>
+          <Role Id="51c2177c-24de-45b0-8bfd-c1537bd5c219" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Supplier_Id">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="e8a052af-0c67-43f5-8d20-981330692f32" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="575f02f1-3eb9-4de7-b011-4fe6a525a5b2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="51c2177c-24de-45b0-8bfd-c1537bd5c219" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="178ece6a-7e2e-4b4f-aeaf-f945d46d5561" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="51c2177c-24de-45b0-8bfd-c1537bd5c219" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is of</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="575f02f1-3eb9-4de7-b011-4fe6a525a5b2" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="CompanyHasSupplier" GUID="0272d8e3-1050-4655-be86-037907b6290a" Name="CompanyHasSupplier" DBName="" ObjectifyingEntityTypeId="CompanyHasSupplier" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="true" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="f73ec529-0d35-4014-acca-dad70e3b323e" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Company">
+            <ValueConstraint />
+          </Role>
+          <Role Id="b7b14441-bfcd-4885-95d0-c135f30a8502" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Supplier">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="bccf2940-ce9a-428d-a35b-e26319809d4a" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="f73ec529-0d35-4014-acca-dad70e3b323e" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="b7b14441-bfcd-4885-95d0-c135f30a8502" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="8a8b6705-9c42-401e-973f-e3178683e68f" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="b7b14441-bfcd-4885-95d0-c135f30a8502" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is for</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="f73ec529-0d35-4014-acca-dad70e3b323e" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="CompanyHasSupplierFromDate" GUID="a1338d74-256e-4b45-ad27-f98c64453805" Name="CompanyHasSupplierFromDate" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="383b70b1-43b3-4d71-8e92-5ac83cfabb1d" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="CompanyHasSupplier">
+            <ValueConstraint />
+          </Role>
+          <Role Id="00b7dc64-9a29-478e-a213-45bbc4caa718" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Date">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="0260c2ea-2ee4-40f2-b702-e59fb280e6e9" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="383b70b1-43b3-4d71-8e92-5ac83cfabb1d" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>from</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="00b7dc64-9a29-478e-a213-45bbc4caa718" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="CompanyHasCompany_Id" GUID="68398b2d-02e8-47e2-9956-e19937943d1e" Name="CompanyHasCompany_Id" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="true" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="68ac5a07-2a67-428b-9c20-8b900b3b943f" Name="" SequenceNr="1" Mandatory="true" JoinedObjectTypeId="Company">
+            <ValueConstraint />
+          </Role>
+          <Role Id="94ce05e7-d3cf-4337-b41b-d8e3a7166ddd" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Company_Id">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="549f64c9-f2f8-4a8d-b2b7-fbf74a54149c" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="68ac5a07-2a67-428b-9c20-8b900b3b943f" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="94ce05e7-d3cf-4337-b41b-d8e3a7166ddd" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="c6b661f3-5156-4bf1-b88a-08de2b494484" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="94ce05e7-d3cf-4337-b41b-d8e3a7166ddd" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is of</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="68ac5a07-2a67-428b-9c20-8b900b3b943f" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="CompanyCompanySupplier" GUID="5afa4618-152a-4a9b-a84f-c70447c75124" Name="CompanyCompanySupplier" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="true" LinkFactTypeRoleId="f73ec529-0d35-4014-acca-dad70e3b323e" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="d2656b0d-7929-423a-a1ca-8fa653cc8182" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="CompanyHasSupplier">
+            <ValueConstraint />
+          </Role>
+          <Role Id="d80bd9d5-5072-454f-9884-6b49f136050d" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Company">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="ef56b075-8a6b-4650-9203-20a2c7d77c90" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="d2656b0d-7929-423a-a1ca-8fa653cc8182" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>involves</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="d80bd9d5-5072-454f-9884-6b49f136050d" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="c5d9ec92-a63e-4a8e-bb9b-b1446eb9b2c8" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="d80bd9d5-5072-454f-9884-6b49f136050d" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is involved in</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="d2656b0d-7929-423a-a1ca-8fa653cc8182" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="SupplierCompanySupplier" GUID="3c3d9200-a991-43c4-b8d0-1c0d9d44d64d" Name="SupplierCompanySupplier" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="true" LinkFactTypeRoleId="b7b14441-bfcd-4885-95d0-c135f30a8502" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="fd97fe54-e47c-4150-9bd1-5639e372159b" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="CompanyHasSupplier">
+            <ValueConstraint />
+          </Role>
+          <Role Id="5bca3e31-9708-4a30-93fc-10da25365495" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Supplier">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="d48b0710-58d6-4278-8875-3a5f50bf3538" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="fd97fe54-e47c-4150-9bd1-5639e372159b" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>involves</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="5bca3e31-9708-4a30-93fc-10da25365495" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="8e43b26b-d55f-4126-952d-825b6d3608fa" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="5bca3e31-9708-4a30-93fc-10da25365495" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is involved in</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="fd97fe54-e47c-4150-9bd1-5639e372159b" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+    </FactTypes>
+    <RoleConstraints>
+      <RoleConstraint Id="InternalUniquenessConstraint1" GUID="baf3adcd-ea96-4e63-8f92-1b8210a75f8e" Name="InternalUniquenessConstraint1" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="68ac5a07-2a67-428b-9c20-8b900b3b943f" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint2" GUID="7abf001c-3d26-4820-9ce5-2fcd6d15a4a7" Name="InternalUniquenessConstraint2" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="94ce05e7-d3cf-4337-b41b-d8e3a7166ddd" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint3" GUID="fd5ebdba-afcb-4ee6-8255-85dbf5ca0e7f" Name="InternalUniquenessConstraint3" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="575f02f1-3eb9-4de7-b011-4fe6a525a5b2" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint4" GUID="2aed5027-d37f-4fec-896f-1555b9b913c3" Name="InternalUniquenessConstraint4" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="51c2177c-24de-45b0-8bfd-c1537bd5c219" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint5" GUID="f01a5441-d6ca-4fd8-9269-b6b762395b69" Name="InternalUniquenessConstraint5" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="f73ec529-0d35-4014-acca-dad70e3b323e" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+          <RoleConstraintRole RoleId="b7b14441-bfcd-4885-95d0-c135f30a8502" SequenceNr="2" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint6" GUID="0ff6a200-53d7-436c-b4e1-265cdc8b5e99" Name="InternalUniquenessConstraint6" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="d2656b0d-7929-423a-a1ca-8fa653cc8182" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint7" GUID="7cca4b40-a700-4d85-92c0-4cd305e4c10b" Name="InternalUniquenessConstraint7" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="fd97fe54-e47c-4150-9bd1-5639e372159b" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint8" GUID="2d2a07bb-33a5-4e2a-b0a0-3b74ad37dfa1" Name="InternalUniquenessConstraint8" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="383b70b1-43b3-4d71-8e92-5ac83cfabb1d" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+    </RoleConstraints>
+    <ModelNotes />
+    <Synonyms />
+  </ORMModel>
+  <ORMDiagram>
+    <Page Id="c74dc5a6-2bb2-4184-888c-6d84f731ac9f" Name="New Model Page 1" Language="ORMModel" IsCoreModelPage="false">
+      <ConceptInstance>
+        <ConceptInstance Symbol="Company" ConceptType="EntityType" RoleId="NotUsed" X="106" Y="62" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Supplier" ConceptType="EntityType" RoleId="NotUsed" X="176" Y="61" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="CompanyHasSupplier" ConceptType="EntityType" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Company_Id" ConceptType="ValueType" RoleId="NotUsed" X="63" Y="86" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Supplier_Id" ConceptType="ValueType" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Date" ConceptType="ValueType" RoleId="NotUsed" X="198" Y="35" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="CompanyHasCompany_Id" ConceptType="FactType" RoleId="NotUsed" X="111" Y="70" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="2">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="CompanyHasCompany_Id" ConceptType="FactTypeReading" RoleId="NotUsed" X="111" Y="83" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="2">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="CompanyHasCompany_Id" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="2">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="SupplierHasSupplier_Id" ConceptType="FactType" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="SupplierHasSupplier_Id" ConceptType="FactTypeReading" RoleId="NotUsed" X="-1" Y="9" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="SupplierHasSupplier_Id" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="CompanyHasSupplier" ConceptType="FactType" RoleId="NotUsed" X="141" Y="50" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="2">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="CompanyHasSupplier" ConceptType="FactTypeReading" RoleId="NotUsed" X="141" Y="63" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="2">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="CompanyHasSupplier" ConceptType="FactTypeName" RoleId="NotUsed" X="130" Y="43" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="2">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="CompanyHasSupplierFromDate" ConceptType="FactType" RoleId="NotUsed" X="168" Y="32" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="CompanyHasSupplierFromDate" ConceptType="FactTypeReading" RoleId="NotUsed" X="167" Y="43" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="CompanyHasSupplierFromDate" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint1" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint2" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint3" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint4" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint5" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint8" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+      </ConceptInstance>
+    </Page>
+  </ORMDiagram>
+</Model>

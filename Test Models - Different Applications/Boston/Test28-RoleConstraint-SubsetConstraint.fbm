@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
+  <ORMModel ModelId="Test28-RoleConstraint-SubsetConstraint" Name="Test28-RoleConstraint-SubsetConstraint" CoreVersionNumber="2.6">
+    <ValueTypes>
+      <ValueType Id="Birth Certificate_Nr" GUID="_E9E8FD03-6735-493C-9DF0-FDEACB57AA9C" Name="Birth Certificate_Nr" DBName="" DataType="NumericSignedInteger" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Date" GUID="_73537DF4-7A22-4C2E-85CF-EB841723683C" Name="Date" DBName="" DataType="TemporalDate" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Person was born" GUID="_CD49B0A5-B448-451B-A2C1-D883B53F8F9E" Name="Person was born" DBName="" DataType="LogicalTrueFalse" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance>
+          <string>True</string>
+        </Instance>
+        <ValueConstraint>
+          <string>True</string>
+        </ValueConstraint>
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Person_Id" GUID="_84770022-ACA5-40E8-B0B5-2A69B19373B9" Name="Person_Id" DBName="" DataType="NumericAutoCounter" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Registered Name" GUID="_ECF0A4E4-DE16-4F2C-B551-BD8C320A12B8" Name="Registered Name" DBName="" DataType="TextFixedLength" DataTypePrecision="0" DataTypeLength="100" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+    </ValueTypes>
+    <EntityTypes>
+      <EntityType Id="Birth Certificate" GUID="_675AD920-4158-445E-BDA0-D9B116555BC3" Name="Birth Certificate" DBName="" ReferenceModeValueTypeId="Birth Certificate_Nr" ReferenceSchemeRoleConstraintId="InternalUniquenessConstraint3" IsObjectifyingEntityType="false" ReferenceMode=".Nr" HideReferenceMode="true" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="Person" GUID="_693AD0E2-D341-4FE2-9A32-6A6BD2282914" Name="Person" DBName="" ReferenceModeValueTypeId="Person_Id" ReferenceSchemeRoleConstraintId="InternalUniquenessConstraint1" IsObjectifyingEntityType="false" ReferenceMode=".Id" HideReferenceMode="true" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+      <EntityType Id="Birth" GUID="_557E22ED-C9DC-4E98-B3FE-0FAE1E4444CB" Name="Birth" DBName="" ReferenceSchemeRoleConstraintId="" IsObjectifyingEntityType="true" ReferenceMode="" HideReferenceMode="true" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+    </EntityTypes>
+    <FactTypes>
+      <FactType Id="Birth" GUID="589980da-f73e-4bfe-a1d8-2d0a54c22f07" Name="Birth" DBName="" ObjectifyingEntityTypeId="Birth" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="true" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_022116A6-1AEE-493D-BC11-4C78B72D8675" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Person">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="f3ae69e4-4fcf-4841-b7de-3adb2040bd39" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_022116A6-1AEE-493D-BC11-4C78B72D8675" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>was born</PredicatePartText>
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="BirthWasOnDate" GUID="1936dc08-c186-4522-b9f8-b71dd782cfc1" Name="BirthWasOnDate" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_48CB05D2-9A1D-45FB-B4B8-B606B1DDBC7F" Name="" SequenceNr="1" Mandatory="true" JoinedObjectTypeId="Birth">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_7C369D07-E9D6-4893-89FD-1D0E557739E0" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Date">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="93c38d63-f204-4fdb-8a83-3704b566fde8" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_48CB05D2-9A1D-45FB-B4B8-B606B1DDBC7F" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>was on</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_7C369D07-E9D6-4893-89FD-1D0E557739E0" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="BirthCertificateHasRegisteredName" GUID="13d02e3d-a6ce-4416-a493-f153c18565d3" Name="BirthCertificateHasRegisteredName" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_FBF7222A-B614-4ADF-A5DA-F079C8C4C359" Name="" SequenceNr="1" Mandatory="true" JoinedObjectTypeId="Birth Certificate">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_EA7EA1E1-5122-494C-9E0B-820B9DBCCC7E" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Registered Name">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="adaaba7e-9a94-4b6f-b2ae-1c3fd2627eea" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_FBF7222A-B614-4ADF-A5DA-F079C8C4C359" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_EA7EA1E1-5122-494C-9E0B-820B9DBCCC7E" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="PersonHasPersonId" GUID="d4387fa6-0d95-45a5-902f-2ed7e5a0f656" Name="PersonHasPersonId" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="true" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_90FAAF6B-C92B-47AE-A7BD-08173B82E0C3" Name="" SequenceNr="1" Mandatory="true" JoinedObjectTypeId="Person">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_5A6E4B4D-A9AF-4487-9420-CC0BD7AF21F1" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Person_Id">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="866e489b-0dc6-4307-84f8-9bd3e534ffe8" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_90FAAF6B-C92B-47AE-A7BD-08173B82E0C3" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_5A6E4B4D-A9AF-4487-9420-CC0BD7AF21F1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="7091079c-6b78-4e50-9ea4-64be8eca02e0" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_5A6E4B4D-A9AF-4487-9420-CC0BD7AF21F1" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is of</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_90FAAF6B-C92B-47AE-A7BD-08173B82E0C3" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="BirthCertificateHasBirthCertificateNr" GUID="e5ae9119-1508-400c-92b3-bf40e380c1af" Name="BirthCertificateHasBirthCertificateNr" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="true" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_6CD8B24D-C412-4F63-B691-5C265C5A4EBE" Name="" SequenceNr="1" Mandatory="true" JoinedObjectTypeId="Birth Certificate">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_3C63899D-D78D-45B0-8118-E49CA0D24D00" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Birth Certificate_Nr">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="5ec79945-b43c-4c49-9c4a-8ab847934193" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_6CD8B24D-C412-4F63-B691-5C265C5A4EBE" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_3C63899D-D78D-45B0-8118-E49CA0D24D00" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="431dc19b-b6b6-4153-9a97-462106424731" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_3C63899D-D78D-45B0-8118-E49CA0D24D00" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is of</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_6CD8B24D-C412-4F63-B691-5C265C5A4EBE" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="PersonHasBirthCertificate" GUID="ed7051cc-e5d9-4c5e-aa5f-64accc9c364b" Name="PersonHasBirthCertificate" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_8753B7A8-D11B-41B4-8159-6CAD442B4953" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Person">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_7A842980-8FD8-4226-A812-2AB2A635BC0A" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Birth Certificate">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="994a5678-4234-4d31-bcae-a3d04ab81139" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_8753B7A8-D11B-41B4-8159-6CAD442B4953" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_7A842980-8FD8-4226-A812-2AB2A635BC0A" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="PersonHasRegisteredName" GUID="ae71ec55-a846-4e9c-826a-4c735da62bdd" Name="PersonHasRegisteredName" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="false" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_43997B4E-E1B1-4F5C-AEA5-6C8090098C81" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Person">
+            <ValueConstraint />
+          </Role>
+          <Role Id="_8A741100-86A1-4499-AEC7-E3719DD4F92F" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Registered Name">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="e4acf1eb-0255-4b8f-a801-a092db5d37bd" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_43997B4E-E1B1-4F5C-AEA5-6C8090098C81" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>has</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_8A741100-86A1-4499-AEC7-E3719DD4F92F" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+      <FactType Id="PersonBirth" GUID="85757f17-43b4-4343-9228-3849f89bd73b" Name="PersonBirth" DBName="" ObjectifyingEntityTypeId="" IsLinkFactType="true" LinkFactTypeRoleId="_022116A6-1AEE-493D-BC11-4C78B72D8675" IsMDAModelElement="false" IsSubtypeRelationshipFactType="false" IsObjectified="false" IsPreferredReferenceSchemeFT="false" IsDerived="false" IsStored="false" DerivationText="" LongDescription="" ShortDescription="" IsIndependent="false" IsSubtypeStateControlling="false" StoreFactCoordinates="false">
+        <GraphLabel />
+        <RoleGroup>
+          <Role Id="_ADA2E12A-FD6F-495A-B941-FE054CC67BC6" Name="" SequenceNr="1" Mandatory="false" JoinedObjectTypeId="Birth">
+            <ValueConstraint />
+          </Role>
+          <Role Id="fc04a0f9-16c8-4f17-a102-849a74eb553f" Name="" SequenceNr="2" Mandatory="false" JoinedObjectTypeId="Person">
+            <ValueConstraint />
+          </Role>
+        </RoleGroup>
+        <Facts />
+        <FactTypeReadings>
+          <FactTypeReading Id="1fddedb1-1dd1-4479-b7b2-24ed75cecc87" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="_ADA2E12A-FD6F-495A-B941-FE054CC67BC6" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>involves</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="fc04a0f9-16c8-4f17-a102-849a74eb553f" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+          <FactTypeReading Id="60aaa2e5-17a2-42e6-b06c-3723ff3627ed" FrontReadingText="" FollowingReadingText="">
+            <PredicateParts>
+              <PredicatePart SequenceNr="1" Role_Id="fc04a0f9-16c8-4f17-a102-849a74eb553f" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText>is involved in</PredicatePartText>
+              </PredicatePart>
+              <PredicatePart SequenceNr="2" Role_Id="_ADA2E12A-FD6F-495A-B941-FE054CC67BC6" PreboundReadingText="" PostboundReadingText="">
+                <PredicatePartText />
+              </PredicatePart>
+            </PredicateParts>
+          </FactTypeReading>
+        </FactTypeReadings>
+        <SubtypeRelationships />
+      </FactType>
+    </FactTypes>
+    <RoleConstraints>
+      <RoleConstraint Id="InternalUniquenessConstraint3" GUID="_B213DC37-2DB0-417A-AA02-F7F93F13E984" Name="InternalUniquenessConstraint3" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_3C63899D-D78D-45B0-8118-E49CA0D24D00" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint4" GUID="_CB57413E-BCA8-4510-ABF7-372AB78A8539" Name="InternalUniquenessConstraint4" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_6CD8B24D-C412-4F63-B691-5C265C5A4EBE" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint1" GUID="_BF3D2926-36C8-494B-B1F5-1586E912DA8A" Name="InternalUniquenessConstraint1" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="true" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_5A6E4B4D-A9AF-4487-9420-CC0BD7AF21F1" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint2" GUID="_312BF8D0-7479-4890-8A57-EB61290CED50" Name="InternalUniquenessConstraint2" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_90FAAF6B-C92B-47AE-A7BD-08173B82E0C3" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint5" GUID="97bc78d8-349b-4ca0-abd6-5f404c392e2a" Name="InternalUniquenessConstraint5" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_ADA2E12A-FD6F-495A-B941-FE054CC67BC6" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint11" GUID="_0420C7A8-379E-4D09-A2AE-1BB5BCA6695F" Name="InternalUniquenessConstraint11" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_FBF7222A-B614-4ADF-A5DA-F079C8C4C359" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint10" GUID="_B5674BFC-3CAD-4E9E-B0F0-69776568C3DF" Name="InternalUniquenessConstraint10" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_48CB05D2-9A1D-45FB-B4B8-B606B1DDBC7F" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint6" GUID="_C72B6A81-0D28-4319-8C3A-E0983A8C7C0E" Name="InternalUniquenessConstraint6" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_8753B7A8-D11B-41B4-8159-6CAD442B4953" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint52" GUID="_8E30DBFC-3377-4F26-875B-7922924841F6" Name="InternalUniquenessConstraint52" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_43997B4E-E1B1-4F5C-AEA5-6C8090098C81" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="InternalUniquenessConstraint7" GUID="_3FB50B9E-C944-47AB-A13C-075EB680D7CE" Name="InternalUniquenessConstraint7" RoleConstraintType="InternalUniquenessConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_022116A6-1AEE-493D-BC11-4C78B72D8675" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument />
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="SubsetConstraint1" GUID="_373F12EC-D9DC-4EB2-AAAB-894C4C7C9D32" Name="SubsetConstraint1" RoleConstraintType="SubsetConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_8753B7A8-D11B-41B4-8159-6CAD442B4953" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+          <RoleConstraintRole RoleId="_022116A6-1AEE-493D-BC11-4C78B72D8675" SequenceNr="2" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument>
+          <RoleConstraintArgument SequenceNr="1">
+            <Role>
+              <RoleReference RoleId="_8753B7A8-D11B-41B4-8159-6CAD442B4953" />
+            </Role>
+            <JoinPath JoinPathError="None">
+              <RolePath>
+                <RoleReference RoleId="_8753B7A8-D11B-41B4-8159-6CAD442B4953" />
+              </RolePath>
+            </JoinPath>
+          </RoleConstraintArgument>
+          <RoleConstraintArgument SequenceNr="2">
+            <Role>
+              <RoleReference RoleId="_022116A6-1AEE-493D-BC11-4C78B72D8675" />
+            </Role>
+            <JoinPath JoinPathError="None">
+              <RolePath>
+                <RoleReference RoleId="_022116A6-1AEE-493D-BC11-4C78B72D8675" />
+              </RolePath>
+            </JoinPath>
+          </RoleConstraintArgument>
+        </Argument>
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="SubsetConstraint2" GUID="_5953E88D-2C04-4D3E-BAA6-1D0E591DFA9A" Name="SubsetConstraint2" RoleConstraintType="SubsetConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_43997B4E-E1B1-4F5C-AEA5-6C8090098C81" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+          <RoleConstraintRole RoleId="_8A741100-86A1-4499-AEC7-E3719DD4F92F" SequenceNr="2" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+          <RoleConstraintRole RoleId="_8753B7A8-D11B-41B4-8159-6CAD442B4953" SequenceNr="3" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+          <RoleConstraintRole RoleId="_EA7EA1E1-5122-494C-9E0B-820B9DBCCC7E" SequenceNr="4" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument>
+          <RoleConstraintArgument SequenceNr="1">
+            <Role>
+              <RoleReference RoleId="_43997B4E-E1B1-4F5C-AEA5-6C8090098C81" />
+              <RoleReference RoleId="_8A741100-86A1-4499-AEC7-E3719DD4F92F" />
+            </Role>
+            <JoinPath JoinPathError="None">
+              <RolePath>
+                <RoleReference RoleId="_43997B4E-E1B1-4F5C-AEA5-6C8090098C81" />
+                <RoleReference RoleId="_8A741100-86A1-4499-AEC7-E3719DD4F92F" />
+              </RolePath>
+            </JoinPath>
+          </RoleConstraintArgument>
+          <RoleConstraintArgument SequenceNr="2">
+            <Role>
+              <RoleReference RoleId="_8753B7A8-D11B-41B4-8159-6CAD442B4953" />
+              <RoleReference RoleId="_EA7EA1E1-5122-494C-9E0B-820B9DBCCC7E" />
+            </Role>
+            <JoinPath JoinPathError="None">
+              <RolePath>
+                <RoleReference RoleId="_8753B7A8-D11B-41B4-8159-6CAD442B4953" />
+                <RoleReference RoleId="_7A842980-8FD8-4226-A812-2AB2A635BC0A" />
+                <RoleReference RoleId="_FBF7222A-B614-4ADF-A5DA-F079C8C4C359" />
+                <RoleReference RoleId="_EA7EA1E1-5122-494C-9E0B-820B9DBCCC7E" />
+              </RolePath>
+            </JoinPath>
+          </RoleConstraintArgument>
+        </Argument>
+        <ValueConstraint />
+      </RoleConstraint>
+      <RoleConstraint Id="EqualityConstraint1" GUID="_7E11D7D9-2BC9-4E9D-BD7F-674F792293FF" Name="EqualityConstraint1" RoleConstraintType="EqualityConstraint" RingConstraintType="None" IsPreferredUniqueness="false" IsDeontic="false" IsMDAModelElement="false" MinimumFrequencyCount="0" MaximumFrequencyCount="0" Cardinality="0" CardinalityRangeType="LessThanOrEqual" LongDescription="" ShortDescription="">
+        <RoleConstraintRoles>
+          <RoleConstraintRole RoleId="_43997B4E-E1B1-4F5C-AEA5-6C8090098C81" SequenceNr="1" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+          <RoleConstraintRole RoleId="_8753B7A8-D11B-41B4-8159-6CAD442B4953" SequenceNr="2" IsEntry="false" IsExit="false" ArgumentId="" ArgumentSequenceNr="0" />
+        </RoleConstraintRoles>
+        <Argument>
+          <RoleConstraintArgument SequenceNr="1">
+            <Role>
+              <RoleReference RoleId="_43997B4E-E1B1-4F5C-AEA5-6C8090098C81" />
+            </Role>
+            <JoinPath JoinPathError="None">
+              <RolePath>
+                <RoleReference RoleId="_43997B4E-E1B1-4F5C-AEA5-6C8090098C81" />
+              </RolePath>
+            </JoinPath>
+          </RoleConstraintArgument>
+          <RoleConstraintArgument SequenceNr="2">
+            <Role>
+              <RoleReference RoleId="_8753B7A8-D11B-41B4-8159-6CAD442B4953" />
+            </Role>
+            <JoinPath JoinPathError="None">
+              <RolePath>
+                <RoleReference RoleId="_8753B7A8-D11B-41B4-8159-6CAD442B4953" />
+              </RolePath>
+            </JoinPath>
+          </RoleConstraintArgument>
+        </Argument>
+        <ValueConstraint />
+      </RoleConstraint>
+    </RoleConstraints>
+    <ModelNotes />
+    <Synonyms />
+  </ORMModel>
+  <ORMDiagram>
+    <Page Id="_8E384BC1-E73D-4B51-946B-98874A8EEFE0" Name="ORMModel3" Language="ORMModel" IsCoreModelPage="false">
+      <ConceptInstance>
+        <ConceptInstance Symbol="Person" ConceptType="EntityType" RoleId="NotUsed" X="96" Y="77" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+          <ConceptInstanceFlag Symbol="Person" ConceptType="EntityType" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1" Flag="EntityTypeHideReferenceMode">
+            <isDirty>true</isDirty>
+          </ConceptInstanceFlag>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Birth Certificate" ConceptType="EntityType" RoleId="NotUsed" X="161" Y="75" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+          <ConceptInstanceFlag Symbol="Birth Certificate" ConceptType="EntityType" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1" Flag="EntityTypeHideReferenceMode">
+            <isDirty>true</isDirty>
+          </ConceptInstanceFlag>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Birth" ConceptType="EntityType" RoleId="NotUsed" X="10" Y="10" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Registered Name" ConceptType="ValueType" RoleId="NotUsed" X="182" Y="113" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Date" ConceptType="ValueType" RoleId="NotUsed" X="181" Y="37" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="PersonHasRegisteredName" ConceptType="FactType" RoleId="NotUsed" X="133" Y="113" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="PersonHasRegisteredName" ConceptType="FactTypeReading" RoleId="NotUsed" X="133" Y="122" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="PersonHasRegisteredName" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="PersonHasBirthCertificate" ConceptType="FactType" RoleId="NotUsed" X="136" Y="77" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="PersonHasBirthCertificate" ConceptType="FactTypeReading" RoleId="NotUsed" X="136" Y="87" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="PersonHasBirthCertificate" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Birth" ConceptType="FactType" RoleId="NotUsed" X="133" Y="37" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Birth" ConceptType="FactTypeReading" RoleId="NotUsed" X="133" Y="46" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Birth" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="BirthWasOnDate" ConceptType="FactType" RoleId="NotUsed" X="159" Y="35" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="BirthWasOnDate" ConceptType="FactTypeReading" RoleId="NotUsed" X="159" Y="44" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="BirthWasOnDate" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="BirthCertificateHasRegisteredName" ConceptType="FactType" RoleId="NotUsed" X="183" Y="92" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="BirthCertificateHasRegisteredName" ConceptType="FactTypeReading" RoleId="NotUsed" X="183" Y="101" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="BirthCertificateHasRegisteredName" ConceptType="FactTypeName" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint52" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint6" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint7" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint10" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="InternalUniquenessConstraint11" ConceptType="RoleConstraint" RoleId="NotUsed" X="0" Y="0" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="SubsetConstraint1" ConceptType="RoleConstraint" RoleId="NotUsed" X="139" Y="61" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="SubsetConstraint2" ConceptType="RoleConstraint" RoleId="NotUsed" X="158" Y="96" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="EqualityConstraint1" ConceptType="RoleConstraint" RoleId="NotUsed" X="137" Y="97" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+      </ConceptInstance>
+    </Page>
+  </ORMDiagram>
+</Model>

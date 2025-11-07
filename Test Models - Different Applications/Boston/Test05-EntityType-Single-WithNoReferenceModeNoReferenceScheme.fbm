@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
+  <ORMModel ModelId="b3e87068-6c1d-43c0-886d-51f7335e8e1b" Name="Test05-EntityType-Single-WithNoReferenceModeNoReferenceScheme" CoreVersionNumber="2.6">
+    <ValueTypes />
+    <EntityTypes>
+      <EntityType Id="NewEntityType1" GUID="_8DAE1FE4-4D4E-477C-B90C-415ACCCF22A9" Name="NewEntityType1" DBName="" ReferenceSchemeRoleConstraintId="" IsObjectifyingEntityType="false" ReferenceMode="" HideReferenceMode="false" IsIndependent="false" IsPersonal="false" IsAbsorbed="false" IsMDAModelElement="false" IsDerived="false" DerivationText="" LongDescription="" ShortDescription="">
+        <GraphLabel />
+        <Instance />
+        <SubtypeRelationships />
+      </EntityType>
+    </EntityTypes>
+    <FactTypes />
+    <RoleConstraints />
+    <ModelNotes />
+    <Synonyms />
+  </ORMModel>
+  <ORMDiagram>
+    <Page Id="_21649367-D986-4628-A2EE-47D215F3C89A" Name="ORMModel1" Language="ORMModel" IsCoreModelPage="false">
+      <ConceptInstance>
+        <ConceptInstance Symbol="NewEntityType1" ConceptType="EntityType" RoleId="NotUsed" X="165" Y="73" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+      </ConceptInstance>
+    </Page>
+  </ORMDiagram>
+</Model>

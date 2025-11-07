@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
+  <ORMModel ModelId="Test20-nORMaDataTypes" Name="Test20-nORMaDataTypes" CoreVersionNumber="2.6">
+    <ValueTypes>
+      <ValueType Id="Decimal" GUID="_806BED7E-6ECD-4BE5-B1B7-21B6B7E49F1E" Name="Decimal" DBName="" DataType="NumericDecimal" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Logical: True False" GUID="_3F396ACA-399E-490B-B22C-7C6673DC1B1A" Name="Logical: True False" DBName="" DataType="LogicalTrueFalse" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Logical: Yes No" GUID="_71E3746D-62D7-453C-B6A5-D9312472DFBE" Name="Logical: Yes No" DBName="" DataType="LogicalYesNo" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Numeric Float (Double Precision)" GUID="_1006E2E7-0D3B-41EC-A7C2-67C20822D263" Name="Numeric Float (Double Precision)" DBName="" DataType="NumericFloatDoublePrecision" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Numeric Float (Single Precision)" GUID="_48B806D9-EF78-4410-A52C-26B22C977B6C" Name="Numeric Float (Single Precision)" DBName="" DataType="NumericFloatSinglePrecision" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Numeric Signed small Integer" GUID="_90FAC8FB-9055-4A68-AF7E-386ECDD1F8E3" Name="Numeric Signed small Integer" DBName="" DataType="NumericSignedSmallInteger" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Numeric unsigned tiny integer" GUID="_60060B38-8E89-495C-82E8-8B7968940A34" Name="Numeric unsigned tiny integer" DBName="" DataType="NumericUnsignedTinyInteger" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Numeric: AutoCounter" GUID="_1CBB7A36-B54B-47B7-8913-C082F9F1B1B3" Name="Numeric: AutoCounter" DBName="" DataType="NumericAutoCounter" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Numeric: Float (Custom Precision)" GUID="_C93BC43F-E525-437E-AF29-490B9BA81EA2" Name="Numeric: Float (Custom Precision)" DBName="" DataType="NumericFloatCustomPrecision" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Numeric: Money" GUID="_E4E85EC0-A7AC-46F6-AEE7-F2101F04521F" Name="Numeric: Money" DBName="" DataType="NumericMoney" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Numeric: Signed Big Integer" GUID="_B9C75C46-4F91-4FCA-BEE4-2485479E8A23" Name="Numeric: Signed Big Integer" DBName="" DataType="NumericSignedBigInteger" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Numerkc: Signed Integer" GUID="_CEF792B0-8CBA-42C7-A23C-39E08893846A" Name="Numerkc: Signed Integer" DBName="" DataType="NumericSignedInteger" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Other: Object Id" GUID="_31B31239-7B36-4BEF-8EBE-24CEF6D138D0" Name="Other: Object Id" DBName="" DataType="OtherObjectID" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Raw Data Fixed Length" GUID="_6036740F-A3DF-4815-B10E-23253192979A" Name="Raw Data Fixed Length" DBName="" DataType="RawDataFixedLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Raw Data Large Length" GUID="_A74C09F8-E1C5-4F79-80AC-6BB9F5266896" Name="Raw Data Large Length" DBName="" DataType="RawDataLargeLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Raw Data OLE Object" GUID="_16BC0B68-BEAC-4BA2-BD59-81983B386A25" Name="Raw Data OLE Object" DBName="" DataType="RawDataOLEObject" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Raw Data: Picture" GUID="_8229B451-04D0-45C0-9490-7BDC78A78803" Name="Raw Data: Picture" DBName="" DataType="RawDataPicture" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Raw Data: Variable Length" GUID="_CAD16558-596C-41CF-BB43-7B8DDB546074" Name="Raw Data: Variable Length" DBName="" DataType="RawDataVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Row Id" GUID="_49D99BEB-8ABD-492A-928F-6B961BE1C001" Name="Row Id" DBName="" DataType="OtherRowID" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Temporal: Auto Timestamp" GUID="_D6DB5606-1064-4296-B535-31286081B837" Name="Temporal: Auto Timestamp" DBName="" DataType="TemporalAutoTimestamp" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Temporal: Date" GUID="_7E5231B5-4122-4B30-8D73-21776E1E6FCB" Name="Temporal: Date" DBName="" DataType="TemporalDate" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Temporal: Date &amp; Time" GUID="_C32564F5-2C5C-47AC-B891-878533856B59" Name="Temporal: Date &amp; Time" DBName="" DataType="TemporalDateAndTime" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Temporal: Time" GUID="_7591037C-D0B3-4A65-977D-731C2F016677" Name="Temporal: Time" DBName="" DataType="TemporalTime" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Text: Fixed Length" GUID="_4153EA88-1FE7-4504-B8AD-2BBFB1822BE0" Name="Text: Fixed Length" DBName="" DataType="TextFixedLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Text: Large Length" GUID="_FF93A1CF-DC1B-4E12-A96C-B8F1A3C18CDC" Name="Text: Large Length" DBName="" DataType="TextLargeLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+      <ValueType Id="Text: Variable Length" GUID="_8B947814-CE0E-4B2C-BFAD-84FB253127B1" Name="Text: Variable Length" DBName="" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+    </ValueTypes>
+    <EntityTypes />
+    <FactTypes />
+    <RoleConstraints />
+    <ModelNotes />
+    <Synonyms />
+  </ORMModel>
+  <ORMDiagram>
+    <Page Id="_6278158D-4A26-4677-AD78-4DC7B9832F7B" Name="ORMModel1" Language="ORMModel" IsCoreModelPage="false">
+      <ConceptInstance>
+        <ConceptInstance Symbol="Logical: True False" ConceptType="ValueType" RoleId="NotUsed" X="53" Y="27" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Logical: Yes No" ConceptType="ValueType" RoleId="NotUsed" X="60" Y="43" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Numeric: AutoCounter" ConceptType="ValueType" RoleId="NotUsed" X="55" Y="60" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Decimal" ConceptType="ValueType" RoleId="NotUsed" X="70" Y="79" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Numeric: Float (Custom Precision)" ConceptType="ValueType" RoleId="NotUsed" X="54" Y="99" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Numeric Float (Double Precision)" ConceptType="ValueType" RoleId="NotUsed" X="114" Y="28" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Numeric Float (Single Precision)" ConceptType="ValueType" RoleId="NotUsed" X="116" Y="43" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Numeric: Money" ConceptType="ValueType" RoleId="NotUsed" X="131" Y="61" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Numeric: Signed Big Integer" ConceptType="ValueType" RoleId="NotUsed" X="121" Y="76" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Numerkc: Signed Integer" ConceptType="ValueType" RoleId="NotUsed" X="127" Y="97" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Numeric Signed small Integer" ConceptType="ValueType" RoleId="NotUsed" X="190" Y="30" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Numeric unsigned tiny integer" ConceptType="ValueType" RoleId="NotUsed" X="190" Y="45" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Other: Object Id" ConceptType="ValueType" RoleId="NotUsed" X="201" Y="60" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Row Id" ConceptType="ValueType" RoleId="NotUsed" X="208" Y="76" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Raw Data Fixed Length" ConceptType="ValueType" RoleId="NotUsed" X="201" Y="99" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Raw Data Large Length" ConceptType="ValueType" RoleId="NotUsed" X="248" Y="31" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Raw Data OLE Object" ConceptType="ValueType" RoleId="NotUsed" X="253" Y="46" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Raw Data: Picture" ConceptType="ValueType" RoleId="NotUsed" X="256" Y="61" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Raw Data: Variable Length" ConceptType="ValueType" RoleId="NotUsed" X="249" Y="77" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Temporal: Auto Timestamp" ConceptType="ValueType" RoleId="NotUsed" X="250" Y="98" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Temporal: Date" ConceptType="ValueType" RoleId="NotUsed" X="305" Y="31" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Temporal: Date &amp; Time" ConceptType="ValueType" RoleId="NotUsed" X="304" Y="48" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Temporal: Time" ConceptType="ValueType" RoleId="NotUsed" X="310" Y="65" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Text: Fixed Length" ConceptType="ValueType" RoleId="NotUsed" X="303" Y="80" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Text: Large Length" ConceptType="ValueType" RoleId="NotUsed" X="308" Y="98" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+        <ConceptInstance Symbol="Text: Variable Length" ConceptType="ValueType" RoleId="NotUsed" X="357" Y="31" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+      </ConceptInstance>
+    </Page>
+  </ORMDiagram>
+</Model>
