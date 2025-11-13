@@ -4,7 +4,9 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [
+  site: 'https://factenginecommunity.github.io',
+  base: '/Fact-Based-Modelling-MetaModel',
+integrations: [
 		starlight({
 			title: 'My Docs',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
@@ -23,5 +25,5 @@ export default defineConfig({
 				},
 			],
 		}),
-	],
+	],  
 });
