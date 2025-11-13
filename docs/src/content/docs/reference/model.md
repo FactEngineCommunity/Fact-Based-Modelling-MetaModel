@@ -1,11 +1,23 @@
 ---
 title: Model
-description: Describing the highest level element in the FBM Exchange MetaModel.
+description: Describes the highest level container for a Fact-Based Model exchange document.
 ---
 
-Model is the highest element in the FBM Exchange MetaModel.
+## Overview
 
-### Example XML snippet:
+The **Model** element is the top-level container for a Fact-Based Model. It aggregates the ORM-specific structures described in subsequent sections of the reference.
 
-	<?xml version="1.0" encoding="utf-8"?>
-	<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
+## Attribute definitions
+
+### Model element
+
+- **XSDVersionNr** – Identifies the schema version used to generate the exchange document.
+
+### ORMModel element
+
+- **ModelId** – Unique identifier for the model instance.
+- **Name** – Display name of the model.
+
+## Additional details
+
+The XSD definition for the `Model` and `ORMModel` elements appears in [Appendix A](./appendix-a), where the full complex type is documented.
