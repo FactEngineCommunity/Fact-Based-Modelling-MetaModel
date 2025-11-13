@@ -6,7 +6,7 @@ description: Complete XSD excerpt for the Model artefact.
 Appendix A contains the generated XSD fragment for the `Model` artefact. The listing below is reproduced from the source document and summarises how value types, entity types, fact types, role constraints, and model notes are grouped under the `ORMModel` element.
 
 ```xml
-<xs:element name="ORMModel">
+<xs:element name="FBMModel">
   <xs:complexType>
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="ValueTypes">
