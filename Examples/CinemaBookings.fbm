@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
-  <ORMModel ModelId="729bef8f-d78a-4936-a9a2-fe468ca4c7fa" Name="CinemaBookings-SemanticLayerTest" CoreVersionNumber="2.6">
+  <FBMModel ModelId="729bef8f-d78a-4936-a9a2-fe468ca4c7fa" Name="CinemaBookings-SemanticLayerTest" CoreVersionNumber="2.6">
     <ValueTypes>
       <ValueType Id="Age" GUID="63f11f25-14d6-4ee3-864b-15234b3c8630" Name="Age" DBName="Age" DataType="TemporalDate" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
         <Instance />
@@ -1715,8 +1715,8 @@
     </RoleConstraints>
     <ModelNotes />
     <Synonyms />
-  </ORMModel>
-  <ORMDiagram>
+  </FBMModel>
+  <FBMDiagram>
     <Page Id="a2dbde51-35fe-4ef1-b2d7-f18509a9cf7b" Name="Cinema" Language="ORMModel" IsCoreModelPage="false">
       <ConceptInstance>
         <ConceptInstance Symbol="Cinema" ConceptType="EntityType" RoleId="NotUsed" X="87" Y="67" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
@@ -2423,5 +2423,5 @@
         </ConceptInstance>
       </ConceptInstance>
     </Page>
-  </ORMDiagram>
+  </FBMDiagram>
 </Model>

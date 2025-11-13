@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Model xmlns="https://www.fbmwg.org/fbm/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.fbmwg.org/fbm/1.0 https://www.fbmwg.org/schemas/fbm-1.0.xsd" XSDVersionNr="0.1">
+  <FBMModel ModelId="Test01-ValueType-Single" Name="Test01-ValueType-Single" CoreVersionNumber="2.6">
+    <ValueTypes>
+      <ValueType Id="NewValueType" GUID="_583CA1BC-4C18-4FD4-95B7-C196189336F3" Name="NewValueType" DBName="" DataType="TextVariableLength" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
+        <Instance />
+        <ValueConstraint />
+        <SubtypeRelationships />
+      </ValueType>
+    </ValueTypes>
+    <EntityTypes />
+    <FactTypes />
+    <RoleConstraints />
+    <ModelNotes />
+    <Synonyms />
+  </FBMModel>
+  <FBMDiagram>
+    <Page Id="_21649367-D986-4628-A2EE-47D215F3C89A" Name="ORMModel1" Language="ORMModel" IsCoreModelPage="false">
+      <ConceptInstance>
+        <ConceptInstance Symbol="NewValueType" ConceptType="ValueType" RoleId="NotUsed" X="172" Y="64" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
+          <isDirty>true</isDirty>
+        </ConceptInstance>
+      </ConceptInstance>
+    </Page>
+  </FBMDiagram>
+</Model>
