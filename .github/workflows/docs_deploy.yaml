@@ -7,7 +7,7 @@ on:
       - feat/create-new-github-actions-for-docs
     paths:
       - "docs/**"
-      - ".github/workflows/deploy-docs-to-pages.yml"
+      - ".github/workflows/docs_deploy.yaml"
   workflow_dispatch:
 
 permissions:
