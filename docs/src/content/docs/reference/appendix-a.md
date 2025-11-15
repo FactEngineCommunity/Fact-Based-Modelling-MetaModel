@@ -3,7 +3,7 @@ title: Appendix A – Model XSD
 description: Complete XSD excerpt for the Model artefact.
 ---
 
-Appendix A contains the generated XSD fragment for the `Model` artefact. The listing below is reproduced from the source document and summarises how value types, entity types, fact types, role constraints, and model notes are grouped under the `ORMModel` element.
+Appendix A contains the generated XSD fragment for the `Model` artefact. The listing below is reproduced from the source document and summarises how value types, entity types, fact types, role constraints, and model notes are grouped under the `FBMModel` element.
 
 ```xml
 <xs:element name="FBMModel">

@@ -30,7 +30,7 @@ description: Covers the ValueTypes collection, ValueType entries, and ValueConst
         <xs:complexType>
           <xs:sequence>
             <xs:element minOccurs="0" maxOccurs="unbounded" ref="Instance" />
-            <xs:element minOccurs="0" maxOccurs="unbounded" name="ValueConstraint" />
+            <xs:element minOccurs="0" maxOccurs="1" ref="ValueConstraint" />
           </xs:sequence>
           <xs:attribute name="Id" type="xs:string" />
           <xs:attribute name="Name" />
