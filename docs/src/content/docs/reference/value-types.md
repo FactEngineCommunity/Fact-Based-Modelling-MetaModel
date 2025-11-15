@@ -18,7 +18,7 @@ description: Covers the ValueTypes collection, ValueType entries, and ValueConst
 - **DataTypeLength** – Length qualifier when required by the chosen data type (for example fixed-length text).
 - **IsMDAModelElement** – `true` when the value type belongs to a non-FBM metamodel packaged within the same exchange document; otherwise `false`.
 
-> Fact-Based Modeling exchange documents may embed Model Driven Architecture (MDA) definitions for languages other than FBM. Elements originating from these auxiliary models are flagged with `IsMDAModelElement`.
+> Fact-Based Modeling exchange documents may embed Model Driven Architecture (MDA) definitions for languages other than FBM. Elements originating from these auxiliary models are flagged with `IsMDAModelElement`. Diagramming tools that do not employ MDA MetaModels injected into the FBM MetaModel can ignore the IsMDAModelElement attribute.
 
 ## XSD text
 

@@ -8,7 +8,7 @@ export default defineConfig({
   base: '/Fact-Based-Modelling-MetaModel',
 integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'FBM MetaModel Documentation',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{
