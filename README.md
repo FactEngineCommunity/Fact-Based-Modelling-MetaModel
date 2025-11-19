@@ -10,3 +10,9 @@ Read the docs at: [Fact-Based Modelling MetaModel](https://factenginecommunity.g
 ## [XSD]
 
 Stores the latest XSD for the FBM Exchange MetaModel.
+
+## [ClassesMappingToTheXSD]
+
+Stores classes, in different programming languages, that map to the desired XSD.
+
+
