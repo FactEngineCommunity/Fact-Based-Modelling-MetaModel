@@ -7,6 +7,7 @@ description: Details for FactTypes, FactType, Role, FactTypeReading, and Predica
 
 The **FactTypes** element aggregates the definitions of fact types present in the model. Each fact type captures its roles, readings, and associated sample data.
 
+
 ## Attribute definitions – FactType element
 
 - **Id** – Unique identifier for the fact type.
