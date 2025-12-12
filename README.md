@@ -1,5 +1,6 @@
 # Fact-Based-Modelling-MetaModel
-A metamodel for sharing Fact-Based Models, such as Object-Role Modeling and FCO-IM
+
+A metamodel for sharing Fact-Based Models, such as Object-Role Modeling and FCO-IM.
 
 # Documentation
 
@@ -26,6 +27,3 @@ Models from different Facct-Based Modeling tools that can be used to generate FB
 ## [Documentation]
 
 Further documentation on Fact-Based Modelling and the FBM Exchange MetaModel.
-
-
-

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ormRoot:ORM2 xmlns:orm="http://schemas.neumont.edu/ORM/2006-04/ORMCore" xmlns:ormDiagram="http://schemas.neumont.edu/ORM/2006-04/ORMDiagram" xmlns:ormRoot="http://schemas.neumont.edu/ORM/2006-04/ORMRoot">
+	<orm:ORMModel id="_C20C97F1-486C-4534-9950-3126BFCBA34C" Name="ORMModel1">
+		<orm:Objects>
+			<orm:EntityType id="_8DAE1FE4-4D4E-477C-B90C-415ACCCF22A9" Name="NewEntityType1" _ReferenceMode="" />
+		</orm:Objects>
+		<orm:ModelErrors>
+			<orm:EntityTypeRequiresReferenceSchemeError id="_CD3F4506-F882-4B88-922A-34A0E598AA62" Name="Entity type 'NewEntityType1' in model 'ORMModel1' requires a local preferred reference scheme or supertype(s) that provide preferred identification.">
+				<orm:EntityType ref="_8DAE1FE4-4D4E-477C-B90C-415ACCCF22A9" />
+			</orm:EntityTypeRequiresReferenceSchemeError>
+		</orm:ModelErrors>
+		<orm:ReferenceModeKinds>
+			<orm:ReferenceModeKind id="_CB0ED9EE-C96C-4519-81A9-2AB0264164A5" FormatString="{1}" ReferenceModeType="General" />
+			<orm:ReferenceModeKind id="_6612C491-0D88-48B7-9128-5256F557D4D8" FormatString="{0}_{1}" ReferenceModeType="Popular" />
+			<orm:ReferenceModeKind id="_14F06CDE-7331-43B3-99F5-A4697715BFD1" FormatString="{1}Value" ReferenceModeType="UnitBased" />
+		</orm:ReferenceModeKinds>
+	</orm:ORMModel>
+	<ormDiagram:ORMDiagram id="_21649367-D986-4628-A2EE-47D215F3C89A" IsCompleteView="false" Name="ORMModel1" BaseFontName="Tahoma" BaseFontSize="0.0972222238779068">
+		<ormDiagram:Shapes>
+			<ormDiagram:ObjectTypeShape id="_DB054F34-7FE7-4751-9784-9324975E8A6B" IsExpanded="true" AbsoluteBounds="5.4392430484294891, 2.4166667461395264, 0.98012548208236694, 0.22950302660465241">
+				<ormDiagram:Subject ref="_8DAE1FE4-4D4E-477C-B90C-415ACCCF22A9" />
+			</ormDiagram:ObjectTypeShape>
+		</ormDiagram:Shapes>
+		<ormDiagram:Subject ref="_C20C97F1-486C-4534-9950-3126BFCBA34C" />
+	</ormDiagram:ORMDiagram>
+</ormRoot:ORM2>
