@@ -1,70 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-16"?>
 <xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="" id="Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="Instance">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="String" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="String" nillable="true">
-    <xs:complexType>
-      <xs:simpleContent msdata:ColumnName="string_Text" msdata:Ordinal="0">
-        <xs:extension base="xs:string" />
-      </xs:simpleContent>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RoleConstraintRole">
-    <xs:complexType>
-      <xs:sequence />
-      <xs:attribute name="RoleId" type="xs:string" />
-      <xs:attribute name="SequenceNr" type="xs:string" />
-      <xs:attribute name="IsEntry" type="xs:string" />
-      <xs:attribute name="IsExit" type="xs:string" />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SubtypeRelationship">
-    <xs:complexType>
-      <xs:sequence />
-      <xs:attribute name="ParentEntityTypeId" type="xs:string" />
-      <xs:attribute name="SubtypingFactTypeId" type="xs:string" />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Fact">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" maxOccurs="unbounded" name="Data">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element minOccurs="0" maxOccurs="unbounded" name="FactData">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element msdata:Ordinal="1" minOccurs="0" name="Value" type="xs:string" />
-                  </xs:sequence>
-                  <xs:attribute name="RoleId" type="xs:string" />
-                </xs:complexType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-      <xs:attribute name="Id" type="xs:string" />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ValueConstraint">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="String" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+  <xs:complexType name="Instance">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" type="StringType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="StringType">
+    <xs:simpleContent msdata:ColumnName="string_Text" msdata:Ordinal="0">
+      <xs:extension base="xs:string" />
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="RoleConstraintRoleType">
+    <xs:sequence />
+    <xs:attribute name="RoleId" type="xs:string" />
+    <xs:attribute name="SequenceNr" type="xs:string" />
+    <xs:attribute name="IsEntry" type="xs:string" />
+    <xs:attribute name="IsExit" type="xs:string" />
+    <xs:attribute name="ArgumentId" type="xs:string" />
+    <xs:attribute name="ArgumentSequenceNr" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="GraphLabel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" type="StringType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SubtypeRelationship">
+    <xs:sequence />
+    <xs:attribute name="ParentEntityTypeId" type="xs:string" />
+    <xs:attribute name="SubtypingFactTypeId" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="Fact">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Data">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="FactData">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element msdata:Ordinal="1" minOccurs="0" name="Value" type="xs:string" />
+                </xs:sequence>
+                <xs:attribute name="RoleId" type="xs:string" />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="ValueConstraint">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" type="StringType" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:element msdata:IsDataSet="true" msdata:Locale="en-US" name="Model">
     <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element ref="Instance" />
-        <xs:element ref="String" />
-        <xs:element ref="RoleConstraintRole" />
-        <xs:element ref="Fact" />
+      <xs:sequence>
         <xs:element name="ORMModel">
           <xs:complexType>
             <xs:sequence>
@@ -74,8 +65,15 @@
                     <xs:element minOccurs="0" maxOccurs="unbounded" name="ValueType">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element minOccurs="0" maxOccurs="unbounded" ref="Instance" />
-                          <xs:element minOccurs="0" maxOccurs="unbounded" name="ValueConstraint" />
+                          <xs:element minOccurs="0" maxOccurs="unbounded" name="Instance" type="Instance" />
+                          <xs:element minOccurs="0" maxOccurs="unbounded" name="ValueConstraint" type="ValueConstraint" />
+                          <xs:element minOccurs="0" maxOccurs="1" name="SubtypeRelationships">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" maxOccurs="unbounded" name="SubtypeRelationship" type="SubtypeRelationship" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
                         </xs:sequence>
                         <xs:attribute name="Id" type="xs:string" />
                         <xs:attribute name="Name" />
@@ -83,6 +81,11 @@
                         <xs:attribute name="DataTypePrecision" type="xs:string" />
                         <xs:attribute name="DataTypeLength" type="xs:string" />
                         <xs:attribute name="IsMDAModelElement" />
+                        <xs:attribute name="GUID" type="xs:string" use="optional" />
+                        <xs:attribute name="DBName" type="xs:string" use="optional" />
+                        <xs:attribute name="IsIndependent" type="xs:boolean" use="required" />
+                        <xs:attribute name="LongDescription" type="xs:string" use="optional" />
+                        <xs:attribute name="ShortDescription" type="xs:string" use="optional" />
                       </xs:complexType>
                     </xs:element>
                   </xs:sequence>
@@ -94,8 +97,15 @@
                     <xs:element minOccurs="0" maxOccurs="unbounded" name="EntityType">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element minOccurs="0" maxOccurs="unbounded" ref="Instance" />
-                          <xs:element minOccurs="0" maxOccurs="unbounded" ref="SubtypeRelationship" />
+                          <xs:element minOccurs="0" maxOccurs="1" name="GraphLabel" type="GraphLabel" />
+                          <xs:element minOccurs="0" maxOccurs="unbounded" name="Instance" type="Instance" />
+                          <xs:element minOccurs="0" maxOccurs="1" name="SubtypeRelationships">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" maxOccurs="unbounded" name="SubtypeRelationship" type="SubtypeRelationship" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
                         </xs:sequence>
                         <xs:attribute name="Id" type="xs:string" />
                         <xs:attribute name="Name" type="xs:string" />
@@ -103,6 +113,17 @@
                         <xs:attribute name="ReferenceMode" />
                         <xs:attribute name="ReferenceSchemeRoleConstraintId" type="xs:string" />
                         <xs:attribute name="IsMDAModelElement" />
+                        <xs:attribute name="GUID" type="xs:string" use="optional" />
+                        <xs:attribute name="DBName" type="xs:string" use="optional" />
+                        <xs:attribute name="ReferenceModeValueTypeId" type="xs:string" use="optional" />
+                        <xs:attribute name="HideReferenceMode" type="xs:boolean" use="required" />
+                        <xs:attribute name="IsIndependent" type="xs:boolean" use="required" />
+                        <xs:attribute name="IsPersonal" type="xs:boolean" use="required" />
+                        <xs:attribute name="IsAbsorbed" type="xs:boolean" use="required" />
+                        <xs:attribute name="IsDerived" type="xs:boolean" use="required" />
+                        <xs:attribute name="DerivationText" type="xs:string" use="optional" />
+                        <xs:attribute name="LongDescription" type="xs:string" use="optional" />
+                        <xs:attribute name="ShortDescription" type="xs:string" use="optional" />
                       </xs:complexType>
                     </xs:element>
                   </xs:sequence>
@@ -114,66 +135,91 @@
                     <xs:element minOccurs="0" maxOccurs="unbounded" name="FactType">
                       <xs:complexType>
                         <xs:sequence>
+                          <xs:element minOccurs="0" maxOccurs="1" name="GraphLabel" type="GraphLabel" />
                           <xs:element minOccurs="0" maxOccurs="unbounded" name="RoleGroup">
                             <xs:complexType>
                               <xs:sequence>
                                 <xs:element minOccurs="0" maxOccurs="unbounded" name="Role">
                                   <xs:complexType>
                                     <xs:sequence>
-                                      <xs:element minOccurs="0" maxOccurs="unbounded" name="ValueConstraint" />
+                                      <xs:element minOccurs="0" maxOccurs="unbounded" name="ValueConstraint" type="ValueConstraint" />
                                     </xs:sequence>
                                     <xs:attribute name="Id" type="xs:string" />
                                     <xs:attribute name="Name" type="xs:string" />
-                                    <xs:attribute name="HostingObjectTypeId" type="xs:string" />
+                                    <xs:attribute name="SequenceNr" />
+                                    <xs:attribute name="Mandatory" />
+                                    <xs:attribute name="JoinedObjectTypeId" />
                                   </xs:complexType>
                                 </xs:element>
                               </xs:sequence>
                             </xs:complexType>
                           </xs:element>
-                          <xs:element name="FactTypeReadings">
-                            <xs:complexType name="New_ComplexType">
+                          <xs:element name="Facts">
+                            <xs:complexType>
                               <xs:all>
-                                <xs:element name="FactTypeReading">
-                                  <xs:complexType name="New_ComplexType">
+                                <xs:element minOccurs="0" maxOccurs="1" name="Fact" type="Fact" />
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="FactTypeReadings">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" maxOccurs="unbounded" name="FactTypeReading">
+                                  <xs:complexType>
                                     <xs:sequence>
                                       <xs:element name="PredicateParts">
-                                        <xs:complexType name="New_ComplexType">
-                                          <xs:all>
-                                            <xs:element name="PredicatePart">
-                                              <xs:complexType name="New_ComplexType">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element minOccurs="0" maxOccurs="unbounded" name="PredicatePart">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element minOccurs="0" maxOccurs="1" name="PredicatePartText" type="xs:string" />
+                                                </xs:sequence>
                                                 <xs:attribute name="SequenceNr" />
-                                                <xs:attribute name="RoleId" />
-                                                <xs:attribute name="PreboundText" />
-                                                <xs:attribute name="PostboundText" />
-                                                <xs:attribute name="PredicatePartText" />
+                                                <xs:attribute name="Role_Id" />
+                                                <xs:attribute name="PreboundReadingText" />
+                                                <xs:attribute name="PostboundReadingText" />
                                               </xs:complexType>
                                             </xs:element>
-                                          </xs:all>
+                                          </xs:sequence>
                                         </xs:complexType>
                                       </xs:element>
                                     </xs:sequence>
                                     <xs:attribute name="Id" />
-                                    <xs:attribute name="FrontText" />
-                                    <xs:attribute name="FollowingText" />
+                                    <xs:attribute name="FrontReadingText" />
+                                    <xs:attribute name="FollowingReadingText" />
                                   </xs:complexType>
                                 </xs:element>
-                              </xs:all>
+                              </xs:sequence>
                             </xs:complexType>
                           </xs:element>
-                          <xs:element name="Facts">
-                            <xs:complexType name="New_ComplexType">
-                              <xs:all>
-                                <xs:element minOccurs="0" maxOccurs="1" ref="Fact" />
-                              </xs:all>
+                          <xs:element minOccurs="0" maxOccurs="1" name="SubtypeRelationships">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" maxOccurs="unbounded" name="SubtypeRelationship" type="SubtypeRelationship" />
+                              </xs:sequence>
                             </xs:complexType>
                           </xs:element>
                         </xs:sequence>
                         <xs:attribute name="Id" type="xs:string" />
                         <xs:attribute name="Name" type="xs:string" />
+                        <xs:attribute name="DBName" type="xs:string" use="optional" />
                         <xs:attribute name="IsSubtypeRelationshipFactType" type="xs:string" />
                         <xs:attribute name="IsObjectified" type="xs:string" />
                         <xs:attribute name="IsPreferredReferenceSchemeFT" type="xs:string" />
                         <xs:attribute name="IsMDAModelElement" />
+                        <xs:attribute name="GUID" type="xs:string" use="optional" />
+                        <xs:attribute name="ObjectifyingEntityTypeId" type="xs:string" />
+                        <xs:attribute name="IsLinkFactType" type="xs:boolean" />
+                        <xs:attribute name="LinkFactTypeRoleId" type="xs:string" />
+                        <xs:attribute name="IsDerived" type="xs:boolean" />
+                        <xs:attribute name="IsStored" type="xs:boolean" />
+                        <xs:attribute name="DerivationText" type="xs:string" />
+                        <xs:attribute name="LongDescription" type="xs:string" />
+                        <xs:attribute name="ShortDescription" type="xs:string" />
+                        <xs:attribute name="IsIndependent" type="xs:boolean" />
+                        <xs:attribute name="IsSubtypeStateControlling" type="xs:boolean" />
+                        <xs:attribute name="StoreFactCoordinates" type="xs:boolean" />
                       </xs:complexType>
                     </xs:element>
                   </xs:sequence>
@@ -185,17 +231,23 @@
                     <xs:element minOccurs="0" maxOccurs="unbounded" name="RoleConstraint">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element minOccurs="0" maxOccurs="unbounded" ref="RoleConstraintRole" />
-                          <xs:element name="Argument">
-                            <xs:complexType name="New_ComplexType">
+                          <xs:element minOccurs="1" maxOccurs="1" name="RoleConstraintRoles">
+                            <xs:complexType>
                               <xs:sequence>
-                                <xs:element name="RoleConstraintArgument">
-                                  <xs:complexType name="New_ComplexType">
+                                <xs:element minOccurs="0" maxOccurs="unbounded" name="RoleConstraintRole" type="RoleConstraintRoleType" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Argument">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" maxOccurs="unbounded" name="RoleConstraintArgument">
+                                  <xs:complexType>
                                     <xs:sequence>
                                       <xs:element name="Role">
-                                        <xs:complexType name="New_ComplexType">
+                                        <xs:complexType>
                                           <xs:sequence>
-                                            <xs:element name="RoleReference">
+                                            <xs:element minOccurs="0" maxOccurs="unbounded" name="RoleReference">
                                               <xs:complexType>
                                                 <xs:attribute name="RoleId" />
                                               </xs:complexType>
@@ -204,12 +256,12 @@
                                         </xs:complexType>
                                       </xs:element>
                                       <xs:element name="JoinPath">
-                                        <xs:complexType name="New_ComplexType">
+                                        <xs:complexType>
                                           <xs:sequence>
                                             <xs:element name="RolePath">
-                                              <xs:complexType name="New_ComplexType">
+                                              <xs:complexType>
                                                 <xs:sequence>
-                                                  <xs:element name="RoleReference">
+                                                  <xs:element minOccurs="0" maxOccurs="unbounded" name="RoleReference">
                                                     <xs:complexType>
                                                       <xs:attribute name="RoleId" />
                                                     </xs:complexType>
@@ -222,24 +274,29 @@
                                         </xs:complexType>
                                       </xs:element>
                                     </xs:sequence>
+                                    <xs:attribute name="SequenceNr" type="xs:string" />
                                   </xs:complexType>
                                 </xs:element>
                               </xs:sequence>
                             </xs:complexType>
                           </xs:element>
+                          <xs:element minOccurs="0" maxOccurs="unbounded" name="ValueConstraint" type="ValueConstraint" />
                         </xs:sequence>
                         <xs:attribute name="Id" type="xs:string" />
                         <xs:attribute name="Name" type="xs:string" />
                         <xs:attribute name="RoleConstraintType" type="xs:string" />
                         <xs:attribute name="RingConstraintType" type="xs:string" />
                         <xs:attribute name="IsDeontic" type="xs:string" />
-                        <xs:attribute name="IsPreferredIdentifier" type="xs:string" />
+                        <xs:attribute name="IsPreferredUniqueness" type="xs:string" />
                         <xs:attribute name="CardinalityRangeType" type="xs:string" />
                         <xs:attribute name="Cardinality" type="xs:string" />
                         <xs:attribute name="MinimumFrequencyCount" type="xs:string" />
                         <xs:attribute name="MaximumFrequencyCount" type="xs:string" />
                         <xs:attribute name="ValueRangeType" />
                         <xs:attribute name="IsMDAModelElement" />
+                        <xs:attribute name="GUID" type="xs:string" use="optional" />
+                        <xs:attribute name="LongDescription" type="xs:string" />
+                        <xs:attribute name="ShortDescription" type="xs:string" />
                       </xs:complexType>
                     </xs:element>
                   </xs:sequence>
@@ -256,6 +313,19 @@
                         <xs:attribute name="Id" type="xs:string" />
                         <xs:attribute name="JoinedObjectId" type="xs:string" />
                         <xs:attribute name="IsMDAModelElement" />
+                        <xs:attribute name="GUID" type="xs:string" use="optional" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="Synonyms">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="Synonym">
+                      <xs:complexType>
+                        <xs:attribute name="ModelElementId" type="xs:string" />
+                        <xs:attribute name="Synonym" type="xs:string" />
                       </xs:complexType>
                     </xs:element>
                   </xs:sequence>
@@ -264,9 +334,67 @@
             </xs:sequence>
             <xs:attribute name="ModelId" type="xs:string" />
             <xs:attribute name="Name" type="xs:string" />
+            <xs:attribute name="CoreVersionNumber" type="xs:string" use="optional" />
           </xs:complexType>
         </xs:element>
-      </xs:choice>
+        <xs:element name="ORMDiagram">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="Page">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="ConceptInstance">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" maxOccurs="unbounded" name="ConceptInstance">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" maxOccurs="1" name="isDirty" type="xs:boolean" />
+                                <xs:element minOccurs="0" maxOccurs="unbounded" name="ConceptInstanceFlag">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element minOccurs="0" maxOccurs="1" name="isDirty" type="xs:boolean" />
+                                    </xs:sequence>
+                                    <xs:attribute name="Symbol" type="xs:string" />
+                                    <xs:attribute name="ConceptType" type="xs:string" />
+                                    <xs:attribute name="RoleId" type="xs:string" />
+                                    <xs:attribute name="X" type="xs:string" />
+                                    <xs:attribute name="Y" type="xs:string" />
+                                    <xs:attribute name="Width" type="xs:string" />
+                                    <xs:attribute name="Height" type="xs:string" />
+                                    <xs:attribute name="Orientation" type="xs:string" />
+                                    <xs:attribute name="Visible" type="xs:boolean" />
+                                    <xs:attribute name="InstanceNumber" type="xs:string" />
+                                    <xs:attribute name="Flag" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="Symbol" type="xs:string" />
+                              <xs:attribute name="ConceptType" type="xs:string" />
+                              <xs:attribute name="RoleId" type="xs:string" />
+                              <xs:attribute name="X" type="xs:string" />
+                              <xs:attribute name="Y" type="xs:string" />
+                              <xs:attribute name="Width" type="xs:string" />
+                              <xs:attribute name="Height" type="xs:string" />
+                              <xs:attribute name="Orientation" type="xs:string" />
+                              <xs:attribute name="Visible" type="xs:boolean" />
+                              <xs:attribute name="InstanceNumber" type="xs:string" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="Id" type="xs:string" />
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="Language" type="xs:string" />
+                  <xs:attribute name="IsCoreModelPage" type="xs:boolean" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
       <xs:attribute name="XSDVersionNr" />
     </xs:complexType>
   </xs:element>
