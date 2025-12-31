@@ -17,4 +17,4 @@ Additional XML artefacts that comply with the same schema may also be delivered 
 
 ### XSD version number
 
-The source XSD document identifies XSD version **V0.1** for the `.fbm` exchange format, with this documentation repository providing revisions as they are made.
+The source XSD document identifies XSD version **V1.2** for the `.fbm` exchange format, with this documentation repository providing revisions as they are made.

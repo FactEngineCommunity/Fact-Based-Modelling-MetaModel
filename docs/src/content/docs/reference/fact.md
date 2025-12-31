@@ -1,5 +1,5 @@
 ---
-title: Fact
+title: Fact (Sample Population)
 description: Describes the Fact element that records sample data for a fact type.
 ---
 
