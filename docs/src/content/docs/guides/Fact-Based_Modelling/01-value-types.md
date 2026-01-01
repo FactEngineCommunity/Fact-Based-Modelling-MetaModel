@@ -11,7 +11,7 @@ Value Types range over a domain of data vales and where the name of the Value Ty
 
 ## Value Types in Object-Role Modeling
 
-Value Types in Object-Role Modeling are drawn as round rectangles with a dashed line and the name of the Value Type within the dashed rounded rectangle, as in Figure 8.1 below.
+Value Types in Object-Role Modeling are drawn as round rectangles with a dashed line and the name of the Value Type within the dashed rounded rectangle, as in Figure 8.1 below.  
 
 ![An example Value Type in ORM](./images/Figure-8.1-AnExampleValueType.png)
 

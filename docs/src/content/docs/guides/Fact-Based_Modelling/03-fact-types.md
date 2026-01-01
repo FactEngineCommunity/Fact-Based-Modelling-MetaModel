@@ -5,7 +5,7 @@ description: Covers Fact Types in Fact-Based Modelling.
 
 In Fact-Based Modeling, Object Types play **Roles** within **Fact Types**. For instance, ‘Object-Role Modeling’ derives its name from this premise.
 
-## What is a Role?
+## What is a Role?  
 
 Roles are placeholders for values of an Object Type.
 
