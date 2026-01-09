@@ -53,13 +53,13 @@ Halpin’s trick was to pretend there was no implied hierarchy at all. The trick
 Probably the best way of thinking of the implied relationship of ostensible subtypes in ORM is to not think of the objects of the relative Object Types as under any hierarchy at all. For example, let us envisage them as marbles on a tabletop, all on the same level and as below:
 
  
-Figure 13.3   Subtype under ORM viewed as a flat transitive association
+![Subtype under ORM viewed as a flat transitive association](./images/Figure-13.3-SubtypeUnderORMViewedAsAFlatTransitiveAssociation.png)
 
 For instance, in the Boston Object-Role Modeling software, you can right-click on a purple subset line and elect to see the implied Fact Type between the “subtype” and its “supertype”, thus pretending/asserting they are not types of hierarchy at all. Figure 13.4 shows what that looks like. Viz the Fact Type at the left of the diagram with Roles marked, ‘Subtype’, and ‘Supertype’.
 
 Once you have convinced yourself that this relationship exists, then you can right-click on the purple subtype line and hide the implied Fact Type.
 
-Figure 13.4   Implied Fact-Type for a Subtype Relationship
+![Implied Fact-Type for a Subtype Relationship](./images/Figure-13.4-ImpliedFact-TypeForASubtypeRelationship.png)
 
 
 Viewing “Child is Person” as not declaring a type hierarchy, but rather a association between object types of equitable conceptualisation, reduces “Child has first-Name because Child is a subtype of Person” to “Child has first-Name by virtue of a transitive association because of a special ‘is’ association between Child and Person and transitively via Person and first-Name”.
