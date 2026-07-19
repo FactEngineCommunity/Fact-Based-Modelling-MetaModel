@@ -2,9 +2,14 @@
 
 A metamodel for sharing Fact-Based Models, such as Object-Role Modeling and FCO-IM.
 
+Licensed under Apache 2.0
+
+
 # Documentation
 
 Read the docs at: [Fact-Based Modelling MetaModel](https://factenginecommunity.github.io/Fact-Based-Modelling-MetaModel/)
+
+
 
 # Folder Descriptions
 
