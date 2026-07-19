@@ -10,10 +10,21 @@ The **Model** element is the top-level container for a Fact-Based Model. It aggr
 <pre>
 Model  
   |--FBMModel  
-  |--FBMDiagrams  
+  |--FBMDiagram
 </pre>
 
 ## Model element
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
+  <FBMModel ModelId="729bef8f-d78a-4936-a9a2-fe468ca4c7fa" Name="CinemaBookings-SemanticLayerTest" CoreVersionNumber="2.6">
+...
+  </FBMModel>
+  <FBMDiagram>
+    <Page Id="a2dbde51-35fe-4ef1-b2d7-f18509a9cf7b" Name="Cinema" Language="ORMModel" IsCoreModelPage="false">
+      <ConceptInstance>
+```
 
 ### Attribute definitions
 
@@ -25,8 +36,9 @@ Model
 
 - **ModelId** – Unique identifier for the model instance.
 - **Name** – Display name of the model.
+- **CoreVersionNumber** – Is the version number of the Core metamodel, if using this FBM Exchange Schema in a 4-Layer architecture with injected metamodels as Core MDAModelElements (Model Driven Architecture Elements).
 
-### FBMDiagrams element
+### FBMDiagram element
 
 - Contains the set of FBM diagrams (Pages) that are used to present the FBM Model diagramatically.
 
