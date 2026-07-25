@@ -2,7 +2,11 @@
 
 A metamodel for sharing Fact-Based Models, such as Object-Role Modeling and FCO-IM.
 
-Licensed under Apache 2.0
+
+
+Model - Licensed under Apache 2.0
+Docs - Copyright FactEngine 2025
+
 
 
 # Documentation
