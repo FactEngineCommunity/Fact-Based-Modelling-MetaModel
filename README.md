@@ -14,10 +14,11 @@ Docs - Copyright FactEngine 2025
 Read the docs at: [Fact-Based Modelling MetaModel](https://factenginecommunity.github.io/Fact-Based-Modelling-MetaModel/)
 
 
+## Version
+
+v1.8
 
 # Folder Descriptions
-
-
 
 |Folder|Description|
 |-|-|
