@@ -13,7 +13,7 @@ Namespace FBMMetaModel
     Public Class Model
 
         <XmlAttribute()>
-        Public XSDVersionNr As Double = 1.7
+        Public XSDVersionNr As Double = 1.8
         Public FBMModel As New FBMMetaModel.FBMModel
         Public FBMDiagram As New List(Of FBMMetaModel.Page)
 

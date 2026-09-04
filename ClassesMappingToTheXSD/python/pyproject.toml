@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "factengine-fbm-metamodel"
+version = "0.1.0"
+description = "Pydantic models and XML I/O for the FactEngine Fact-Based Modelling metamodel"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+authors = [{ name = "FactEngine Community" }]
+keywords = ["fact-based-modelling", "ORM", "FCO-IM", "Pydantic", "metamodel"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Typing :: Typed",
+]
+dependencies = ["pydantic>=2.10,<3"]
+
+[project.optional-dependencies]
+dev = ["build>=1.2"]
+
+[project.urls]
+Homepage = "https://github.com/FactEngineCommunity/Fact-Based-Modelling-MetaModel"
+Documentation = "https://factenginecommunity.github.io/Fact-Based-Modelling-MetaModel/"
+Repository = "https://github.com/FactEngineCommunity/Fact-Based-Modelling-MetaModel"
+
+[tool.setuptools.package-data]
+fbm_metamodel = ["py.typed"]
