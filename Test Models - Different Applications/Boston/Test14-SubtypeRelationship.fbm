@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
-  <ORMModel ModelId="Test14-SubtypeRelationship" Name="Test14-SubtypeRelationship" CoreVersionNumber="2.6">
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.8">
+  <FBMModel ModelId="Test14-SubtypeRelationship" Name="Test14-SubtypeRelationship" CoreVersionNumber="2.6">
     <ValueTypes>
       <ValueType Id="Person_Id" GUID="_61F09201-C182-4D55-8B05-D23F6A69CC61" Name="Person_Id" DBName="" DataType="NumericFloatCustomPrecision" DataTypePrecision="0" DataTypeLength="2" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
         <Instance />
@@ -140,8 +140,8 @@
     </RoleConstraints>
     <ModelNotes />
     <Synonyms />
-  </ORMModel>
-  <ORMDiagram>
+  </FBMModel>
+  <FBMDiagram>
     <Page Id="_21649367-D986-4628-A2EE-47D215F3C89A" Name="ORMModel1" Language="ORMModel" IsCoreModelPage="false">
       <ConceptInstance>
         <ConceptInstance Symbol="Person" ConceptType="EntityType" RoleId="NotUsed" X="141" Y="74" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
@@ -182,5 +182,5 @@
         </ConceptInstance>
       </ConceptInstance>
     </Page>
-  </ORMDiagram>
+  </FBMDiagram>
 </Model>

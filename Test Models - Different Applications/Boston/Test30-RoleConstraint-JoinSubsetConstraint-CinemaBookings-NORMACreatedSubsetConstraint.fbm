@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
-  <ORMModel ModelId="4e6252e6-1ce6-4f22-810d-f08f9fb19313" Name="Test30-RoleConstraint-JoinSubsetConstraint-CinemaBookings-NORMACreatedSubsetConstraint" CoreVersionNumber="2.6">
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.8">
+  <FBMModel ModelId="4e6252e6-1ce6-4f22-810d-f08f9fb19313" Name="Test30-RoleConstraint-JoinSubsetConstraint-CinemaBookings-NORMACreatedSubsetConstraint" CoreVersionNumber="2.6">
     <ValueTypes>
       <ValueType Id="Cinema_Id" GUID="_37398BE6-EAD7-4904-A0FE-BE6161510B39" Name="Cinema_Id" DBName="" DataType="NumericAutoCounter" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
         <Instance />
@@ -759,8 +759,8 @@
     </RoleConstraints>
     <ModelNotes />
     <Synonyms />
-  </ORMModel>
-  <ORMDiagram>
+  </FBMModel>
+  <FBMDiagram>
     <Page Id="_23E3D722-B2A1-4761-A074-BB382AFBBCFB" Name="New Model Page 1" Language="ORMModel" IsCoreModelPage="false">
       <ConceptInstance>
         <ConceptInstance Symbol="Film" ConceptType="EntityType" RoleId="NotUsed" X="86" Y="84" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
@@ -948,5 +948,5 @@
         </ConceptInstance>
       </ConceptInstance>
     </Page>
-  </ORMDiagram>
+  </FBMDiagram>
 </Model>

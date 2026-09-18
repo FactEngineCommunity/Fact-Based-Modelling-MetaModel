@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
-  <ORMModel ModelId="e23528f4-99e3-4110-9a4d-16f2eb8e5da4" Name="Test11-FactType-FactTypeReading-NoPreBoundReadingTextFollowingText" CoreVersionNumber="2.6">
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.8">
+  <FBMModel ModelId="e23528f4-99e3-4110-9a4d-16f2eb8e5da4" Name="Test11-FactType-FactTypeReading-NoPreBoundReadingTextFollowingText" CoreVersionNumber="2.6">
     <ValueTypes>
       <ValueType Id="Name" GUID="_6B1EE98A-19B0-4C61-A9AA-2789A7E48FC6" Name="Name" DBName="" DataType="TextFixedLength" DataTypePrecision="0" DataTypeLength="50" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
         <Instance />
@@ -107,8 +107,8 @@
     </RoleConstraints>
     <ModelNotes />
     <Synonyms />
-  </ORMModel>
-  <ORMDiagram>
+  </FBMModel>
+  <FBMDiagram>
     <Page Id="_21649367-D986-4628-A2EE-47D215F3C89A" Name="ORMModel1" Language="ORMModel" IsCoreModelPage="false">
       <ConceptInstance>
         <ConceptInstance Symbol="Person" ConceptType="EntityType" RoleId="NotUsed" X="141" Y="74" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
@@ -134,5 +134,5 @@
         </ConceptInstance>
       </ConceptInstance>
     </Page>
-  </ORMDiagram>
+  </FBMDiagram>
 </Model>

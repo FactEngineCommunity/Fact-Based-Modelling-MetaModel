@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
-  <ORMModel ModelId="396a54f9-8261-41ec-a06c-41b36a450ed7" Name="Test22-ObjectifiedFactTypeWithAdjoinedFactType" CoreVersionNumber="2.6">
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.8">
+  <FBMModel ModelId="396a54f9-8261-41ec-a06c-41b36a450ed7" Name="Test22-ObjectifiedFactTypeWithAdjoinedFactType" CoreVersionNumber="2.6">
     <ValueTypes>
       <ValueType Id="Company_Id" GUID="068dded6-0523-4d28-b9c0-ec1a77cf8a67" Name="Company_Id" DBName="" DataType="NumericAutoCounter" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="true" IsMDAModelElement="false">
         <Instance />
@@ -298,8 +298,8 @@
     </RoleConstraints>
     <ModelNotes />
     <Synonyms />
-  </ORMModel>
-  <ORMDiagram>
+  </FBMModel>
+  <FBMDiagram>
     <Page Id="c74dc5a6-2bb2-4184-888c-6d84f731ac9f" Name="New Model Page 1" Language="ORMModel" IsCoreModelPage="false">
       <ConceptInstance>
         <ConceptInstance Symbol="Company" ConceptType="EntityType" RoleId="NotUsed" X="106" Y="62" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
@@ -376,5 +376,5 @@
         </ConceptInstance>
       </ConceptInstance>
     </Page>
-  </ORMDiagram>
+  </FBMDiagram>
 </Model>

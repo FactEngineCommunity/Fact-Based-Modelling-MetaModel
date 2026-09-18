@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
-  <ORMModel ModelId="Test27-RoleConstraint-EqualityConstraint" Name="Test27-RoleConstraint-EqualityConstraint" CoreVersionNumber="2.6">
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.8">
+  <FBMModel ModelId="Test27-RoleConstraint-EqualityConstraint" Name="Test27-RoleConstraint-EqualityConstraint" CoreVersionNumber="2.6">
     <ValueTypes>
       <ValueType Id="Birth Certificate_Nr" GUID="_E9E8FD03-6735-493C-9DF0-FDEACB57AA9C" Name="Birth Certificate_Nr" DBName="" DataType="NumericSignedInteger" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
         <Instance />
@@ -444,8 +444,8 @@
     </RoleConstraints>
     <ModelNotes />
     <Synonyms />
-  </ORMModel>
-  <ORMDiagram>
+  </FBMModel>
+  <FBMDiagram>
     <Page Id="_8E384BC1-E73D-4B51-946B-98874A8EEFE0" Name="ORMModel3" Language="ORMModel" IsCoreModelPage="false">
       <ConceptInstance>
         <ConceptInstance Symbol="Person" ConceptType="EntityType" RoleId="NotUsed" X="96" Y="77" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
@@ -540,5 +540,5 @@
         </ConceptInstance>
       </ConceptInstance>
     </Page>
-  </ORMDiagram>
+  </FBMDiagram>
 </Model>

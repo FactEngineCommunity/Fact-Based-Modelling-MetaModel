@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
-  <ORMModel ModelId="Test25-RoleConstraint-RingConstraint" Name="Test25-RoleConstraint-RingConstraint" CoreVersionNumber="2.6">
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.8">
+  <FBMModel ModelId="Test25-RoleConstraint-RingConstraint" Name="Test25-RoleConstraint-RingConstraint" CoreVersionNumber="2.6">
     <ValueTypes>
       <ValueType Id="Person_Id" GUID="_D5B95D17-C76D-4F29-B883-BB598D369B67" Name="Person_Id" DBName="" DataType="NumericAutoCounter" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
         <Instance />
@@ -139,8 +139,8 @@
     </RoleConstraints>
     <ModelNotes />
     <Synonyms />
-  </ORMModel>
-  <ORMDiagram>
+  </FBMModel>
+  <FBMDiagram>
     <Page Id="_972A7B94-E39D-4147-BCF6-E0D3B76A487D" Name="ORMModel1" Language="ORMModel" IsCoreModelPage="false">
       <ConceptInstance>
         <ConceptInstance Symbol="Person" ConceptType="EntityType" RoleId="NotUsed" X="158" Y="73" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
@@ -169,5 +169,5 @@
         </ConceptInstance>
       </ConceptInstance>
     </Page>
-  </ORMDiagram>
+  </FBMDiagram>
 </Model>

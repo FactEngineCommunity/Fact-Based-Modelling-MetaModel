@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
-  <ORMModel ModelId="Test18-RoleConstraint-Subset Constraint" Name="Test18-RoleConstraint-Subset Constraint" CoreVersionNumber="2.6">
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.8">
+  <FBMModel ModelId="Test18-RoleConstraint-Subset Constraint" Name="Test18-RoleConstraint-Subset Constraint" CoreVersionNumber="2.6">
     <ValueTypes>
       <ValueType Id="Birth Certificate_Nr" GUID="_5A170D36-5375-4123-A141-E178C479E68D" Name="Birth Certificate_Nr" DBName="" DataType="NumericSignedInteger" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
         <Instance />
@@ -444,8 +444,8 @@
     </RoleConstraints>
     <ModelNotes />
     <Synonyms />
-  </ORMModel>
-  <ORMDiagram>
+  </FBMModel>
+  <FBMDiagram>
     <Page Id="_8CA922B0-6F57-4577-AA21-8E9223147F32" Name="ORMModel2" Language="ORMModel" IsCoreModelPage="false">
       <ConceptInstance>
         <ConceptInstance Symbol="Person" ConceptType="EntityType" RoleId="NotUsed" X="119" Y="80" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
@@ -540,5 +540,5 @@
         </ConceptInstance>
       </ConceptInstance>
     </Page>
-  </ORMDiagram>
+  </FBMDiagram>
 </Model>

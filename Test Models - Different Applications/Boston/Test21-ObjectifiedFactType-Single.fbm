@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
-  <ORMModel ModelId="Test21-ObjectifiedFactType-Single" Name="Test21-ObjectifiedFactType-Single" CoreVersionNumber="2.6">
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.8">
+  <FBMModel ModelId="Test21-ObjectifiedFactType-Single" Name="Test21-ObjectifiedFactType-Single" CoreVersionNumber="2.6">
     <ValueTypes>
       <ValueType Id="Company_Id" GUID="_18263973-6FF9-4F3E-BC0A-A3BEC45AF2F0" Name="Company_Id" DBName="" DataType="NumericAutoCounter" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
         <Instance />
@@ -261,8 +261,8 @@
     </RoleConstraints>
     <ModelNotes />
     <Synonyms />
-  </ORMModel>
-  <ORMDiagram>
+  </FBMModel>
+  <FBMDiagram>
     <Page Id="_59ACC969-C090-45A7-B840-B7722C2B6779" Name="ORMModel1" Language="ORMModel" IsCoreModelPage="false">
       <ConceptInstance>
         <ConceptInstance Symbol="Company" ConceptType="EntityType" RoleId="NotUsed" X="137" Y="54" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
@@ -294,5 +294,5 @@
         </ConceptInstance>
       </ConceptInstance>
     </Page>
-  </ORMDiagram>
+  </FBMDiagram>
 </Model>

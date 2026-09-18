@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
-  <ORMModel ModelId="Test20-nORMaDataTypes" Name="Test20-nORMaDataTypes" CoreVersionNumber="2.6">
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.8">
+  <FBMModel ModelId="Test20-nORMaDataTypes" Name="Test20-nORMaDataTypes" CoreVersionNumber="2.6">
     <ValueTypes>
       <ValueType Id="Decimal" GUID="_806BED7E-6ECD-4BE5-B1B7-21B6B7E49F1E" Name="Decimal" DBName="" DataType="NumericDecimal" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
         <Instance />
@@ -138,8 +138,8 @@
     <RoleConstraints />
     <ModelNotes />
     <Synonyms />
-  </ORMModel>
-  <ORMDiagram>
+  </FBMModel>
+  <FBMDiagram>
     <Page Id="_6278158D-4A26-4677-AD78-4DC7B9832F7B" Name="ORMModel1" Language="ORMModel" IsCoreModelPage="false">
       <ConceptInstance>
         <ConceptInstance Symbol="Logical: True False" ConceptType="ValueType" RoleId="NotUsed" X="53" Y="27" Width="0" Height="0" Orientation="0" Visible="false" InstanceNumber="1">
@@ -222,5 +222,5 @@
         </ConceptInstance>
       </ConceptInstance>
     </Page>
-  </ORMDiagram>
+  </FBMDiagram>
 </Model>

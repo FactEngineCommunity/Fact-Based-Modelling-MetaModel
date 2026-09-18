@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
-  <ORMModel ModelId="Test16-RoleConstraint-RoleValueConstraint" Name="Test16-RoleConstraint-RoleValueConstraint" CoreVersionNumber="2.6">
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.8">
+  <FBMModel ModelId="Test16-RoleConstraint-RoleValueConstraint" Name="Test16-RoleConstraint-RoleValueConstraint" CoreVersionNumber="2.6">
     <ValueTypes>
       <ValueType Id="Bin_Nr" GUID="_5699CED2-D8D4-4FC7-8FCA-59E82C75C439" Name="Bin_Nr" DBName="" DataType="NumericSignedInteger" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
         <Instance />
@@ -417,8 +417,8 @@
     </RoleConstraints>
     <ModelNotes />
     <Synonyms />
-  </ORMModel>
-  <ORMDiagram>
+  </FBMModel>
+  <FBMDiagram>
     <Page Id="_21649367-D986-4628-A2EE-47D215F3C89A" Name="ORMModel1" Language="ORMModel" IsCoreModelPage="false">
       <ConceptInstance>
         <ConceptInstance Symbol="Part" ConceptType="EntityType" RoleId="NotUsed" X="128" Y="83" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
@@ -495,5 +495,5 @@
         </ConceptInstance>
       </ConceptInstance>
     </Page>
-  </ORMDiagram>
+  </FBMDiagram>
 </Model>

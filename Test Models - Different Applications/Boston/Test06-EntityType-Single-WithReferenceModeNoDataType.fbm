@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.7">
-  <ORMModel ModelId="838970b2-6885-440e-bdc5-3a8edae3e5e7" Name="Test06-EntityType-Single-WithReferenceModeNoDataType" CoreVersionNumber="2.6">
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XSDVersionNr="1.8">
+  <FBMModel ModelId="838970b2-6885-440e-bdc5-3a8edae3e5e7" Name="Test06-EntityType-Single-WithReferenceModeNoDataType" CoreVersionNumber="2.6">
     <ValueTypes>
       <ValueType Id="NewEntityType1_Id" GUID="_61F09201-C182-4D55-8B05-D23F6A69CC61" Name="NewEntityType1_Id" DBName="" DataType="DataTypeNotSet" DataTypePrecision="0" DataTypeLength="0" LongDescription="" ShortDescription="" IsIndependent="false" IsMDAModelElement="false">
         <Instance />
@@ -70,8 +70,8 @@
     </RoleConstraints>
     <ModelNotes />
     <Synonyms />
-  </ORMModel>
-  <ORMDiagram>
+  </FBMModel>
+  <FBMDiagram>
     <Page Id="_21649367-D986-4628-A2EE-47D215F3C89A" Name="ORMModel1" Language="ORMModel" IsCoreModelPage="false">
       <ConceptInstance>
         <ConceptInstance Symbol="NewEntityType1" ConceptType="EntityType" RoleId="NotUsed" X="165" Y="71" Width="0" Height="0" Orientation="0" Visible="true" InstanceNumber="1">
@@ -100,5 +100,5 @@
         </ConceptInstance>
       </ConceptInstance>
     </Page>
-  </ORMDiagram>
+  </FBMDiagram>
 </Model>
