@@ -1,0 +1,963 @@
+{
+  "description": "Generated Apache Ossie YAML reference results",
+  "source_root": "Boston",
+  "file_count": 30,
+  "warning_count": 57,
+  "files": [
+    {
+      "source": "Boston/Test01-ValueType-Single.fbm",
+      "output": "Test01-ValueType-Single.yaml",
+      "diagnostics": []
+    },
+    {
+      "source": "Boston/Test02-ValueType-Single-WithDataType.fbm",
+      "output": "Test02-ValueType-Single-WithDataType.yaml",
+      "diagnostics": []
+    },
+    {
+      "source": "Boston/Test03-ValueType-Single-WithDataTypeDataTypeLength.fbm",
+      "output": "Test03-ValueType-Single-WithDataTypeDataTypeLength.yaml",
+      "diagnostics": []
+    },
+    {
+      "source": "Boston/Test04-ValueType-Single-WithDataTypeDataTypePrecision.fbm",
+      "output": "Test04-ValueType-Single-WithDataTypeDataTypePrecision.yaml",
+      "diagnostics": []
+    },
+    {
+      "source": "Boston/Test05-EntityType-Single-WithNoReferenceModeNoReferenceScheme.fbm",
+      "output": "Test05-EntityType-Single-WithNoReferenceModeNoReferenceScheme.yaml",
+      "diagnostics": []
+    },
+    {
+      "source": "Boston/Test06-EntityType-Single-WithReferenceModeNoDataType.fbm",
+      "output": "Test06-EntityType-Single-WithReferenceModeNoDataType.yaml",
+      "diagnostics": [
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '79b07a87-f27d-4ab1-9516-71ac14b9bc5e' for fact type 'NewEntityType1HasNewEntityType1Id' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/NewEntityType1HasNewEntityType1Id/readings/79b07a87-f27d-4ab1-9516-71ac14b9bc5e"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test07-EntityType-Single-WithReferenceModeDataType.fbm",
+      "output": "Test07-EntityType-Single-WithReferenceModeDataType.yaml",
+      "diagnostics": [
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '6ab91fbe-8b6a-45e0-8368-3dbf0fc66d6e' for fact type 'NewEntityType1HasNewEntityType1Id' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/NewEntityType1HasNewEntityType1Id/readings/6ab91fbe-8b6a-45e0-8368-3dbf0fc66d6e"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test08-EntityType-Single-WithReferenceModeDataTypeLength.fbm",
+      "output": "Test08-EntityType-Single-WithReferenceModeDataTypeLength.yaml",
+      "diagnostics": [
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '10da8069-4fe4-4780-9bcd-94925944bb6b' for fact type 'NewEntityType1HasNewEntityType1Id' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/NewEntityType1HasNewEntityType1Id/readings/10da8069-4fe4-4780-9bcd-94925944bb6b"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test09-EntityType-Single-WithReferenceModeDataTypePrecision.fbm",
+      "output": "Test09-EntityType-Single-WithReferenceModeDataTypePrecision.yaml",
+      "diagnostics": [
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'f6155252-912e-47f2-a2fb-567efa802934' for fact type 'NewEntityType1HasNewEntityType1Id' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/NewEntityType1HasNewEntityType1Id/readings/f6155252-912e-47f2-a2fb-567efa802934"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test10-FactType-FactTypeReading-NoPreOrPostBoundReadingText.fbm",
+      "output": "Test10-FactType-FactTypeReading-NoPreOrPostBoundReadingText.yaml",
+      "diagnostics": [
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'e2cb5628-b965-4ab2-aaa8-d7792210100c' for fact type 'PersonHasPersonId' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonHasPersonId/readings/e2cb5628-b965-4ab2-aaa8-d7792210100c"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test11-FactType-FactTypeReading-NoPreBoundReadingTextFollowingText.fbm",
+      "output": "Test11-FactType-FactTypeReading-NoPreBoundReadingTextFollowingText.yaml",
+      "diagnostics": [
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'dfb371b3-ce61-4bbc-ab20-39be4ce5fcb4' for fact type 'PersonHasPersonId' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonHasPersonId/readings/dfb371b3-ce61-4bbc-ab20-39be4ce5fcb4"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test12-FactType-FactTypeReading-ForeTextPreAndPostBoundReadingText.fbm",
+      "output": "Test12-FactType-FactTypeReading-ForeTextPreAndPostBoundReadingText.yaml",
+      "diagnostics": [
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '697b62c5-bfb7-4f70-8d74-f0cb1b0a4fab' for fact type 'PersonHasPersonId' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonHasPersonId/readings/697b62c5-bfb7-4f70-8d74-f0cb1b0a4fab"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test13-RoleConstraint-ExternalUniquenessConstraint.fbm",
+      "output": "Test13-RoleConstraint-ExternalUniquenessConstraint.yaml",
+      "diagnostics": [
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '16d4f830-ee02-416c-a785-f7601b76de26' for fact type 'PersonHasPersonId' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonHasPersonId/readings/16d4f830-ee02-416c-a785-f7601b76de26"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'ExternalUniquenessConstraint1' (ExternalUniquenessConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/ExternalUniquenessConstraint1"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test14-SubtypeRelationship.fbm",
+      "output": "Test14-SubtypeRelationship.yaml",
+      "diagnostics": [
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'd95f2fa2-7303-4d12-9670-9b724ef9d5c2' for fact type 'PersonHasPersonId' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonHasPersonId/readings/d95f2fa2-7303-4d12-9670-9b724ef9d5c2"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test15-RoleConstraint-RingConstraint.fbm",
+      "output": "Test15-RoleConstraint-RingConstraint.yaml",
+      "diagnostics": [
+        {
+          "code": "FBM_OBJECTIFICATION_UNMAPPED",
+          "severity": "warning",
+          "message": "Objectification for 'PersonIsParentOfPerson' was preserved as metadata.",
+          "source_path": "fact_types/PersonIsParentOfPerson"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'b6ff1bd0-6ff4-4913-b369-6383b7e7fb20' for fact type 'PersonIsParentOfPerson' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonIsParentOfPerson/readings/b6ff1bd0-6ff4-4913-b369-6383b7e7fb20"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'ea05b292-255b-4d55-a08a-bcd90342fcba' for fact type 'PersonHasPersonId' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonHasPersonId/readings/ea05b292-255b-4d55-a08a-bcd90342fcba"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '007b3d60-f50c-4761-b3f2-8b6865e96c83' for fact type 'PersonPersonIsParentOfPerson' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonPersonIsParentOfPerson/readings/007b3d60-f50c-4761-b3f2-8b6865e96c83"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '0b7a5467-d623-4269-98ba-3e00deeeb9f4' for fact type 'PersonPersonIsParentOfPerson1' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonPersonIsParentOfPerson1/readings/0b7a5467-d623-4269-98ba-3e00deeeb9f4"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'RingConstraint1' (RingConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/RingConstraint1"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test16-RoleConstraint-RoleValueConstraint.fbm",
+      "output": "Test16-RoleConstraint-RoleValueConstraint.yaml",
+      "diagnostics": [
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '8cf6df9b-5220-406f-9dbf-096f081f80e0' for fact type 'BinHasBinNr' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/BinHasBinNr/readings/8cf6df9b-5220-406f-9dbf-096f081f80e0"
+        },
+        {
+          "code": "FBM_OBJECTIFICATION_UNMAPPED",
+          "severity": "warning",
+          "message": "Objectification for 'StockedItem' was preserved as metadata.",
+          "source_path": "fact_types/StockedItem"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '96c5d618-f6c6-4b6e-90fa-60b2e2c9a9b7' for fact type 'PartHasPartNr' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PartHasPartNr/readings/96c5d618-f6c6-4b6e-90fa-60b2e2c9a9b7"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'dbee74d3-32ea-4264-8b3c-1c5d4a8906c1' for fact type 'WarehouseHasWarehouseName' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/WarehouseHasWarehouseName/readings/dbee74d3-32ea-4264-8b3c-1c5d4a8906c1"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '977de97a-0e5a-409c-8775-d1a5daba1033' for fact type 'PartStockedItem' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PartStockedItem/readings/977de97a-0e5a-409c-8775-d1a5daba1033"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '2c9c273f-eaaf-4ace-8152-852725b6d4d5' for fact type 'BinStockedItem' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/BinStockedItem/readings/2c9c273f-eaaf-4ace-8152-852725b6d4d5"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'b0d69710-fe95-4bdc-9863-6ed97e7ab275' for fact type 'WarehouseStockedItem' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/WarehouseStockedItem/readings/b0d69710-fe95-4bdc-9863-6ed97e7ab275"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'RoleValueConstraint1' (RoleValueConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/RoleValueConstraint1"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'RoleValueConstraint2' (RoleValueConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/RoleValueConstraint2"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test17-RoleConstraint-Equality Constraint.fbm",
+      "output": "Test17-RoleConstraint-Equality Constraint.yaml",
+      "diagnostics": [
+        {
+          "code": "FBM_CONCEPT_NAME_COLLIDES_WITH_OSSIE",
+          "severity": "warning",
+          "message": "FBM object type 'Date' was exported as Ossie concept 'DateType' because its name is already reserved.",
+          "source_path": "value_types/Date"
+        },
+        {
+          "code": "FBM_VALUE_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Value constraints on 'Person was born' need Ossie requires parsing.",
+          "source_path": "value_types/Person was born/value_constraints"
+        },
+        {
+          "code": "FBM_OBJECTIFICATION_UNMAPPED",
+          "severity": "warning",
+          "message": "Objectification for 'Birth' was preserved as metadata.",
+          "source_path": "fact_types/Birth"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '8b82ffe3-6ee5-425f-9ab0-1bb16dc5115c' for fact type 'PersonHasPersonId' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonHasPersonId/readings/8b82ffe3-6ee5-425f-9ab0-1bb16dc5115c"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '2c9fcc39-6cc3-4c3b-b3f9-121a00f8adc5' for fact type 'BirthCertificateHasBirthCertificateNr' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/BirthCertificateHasBirthCertificateNr/readings/2c9fcc39-6cc3-4c3b-b3f9-121a00f8adc5"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '07c7ffc2-b420-48a5-ab63-4d79d416d83a' for fact type 'PersonBirth' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonBirth/readings/07c7ffc2-b420-48a5-ab63-4d79d416d83a"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'SubsetConstraint1' (SubsetConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/SubsetConstraint1"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'SubsetConstraint2' (SubsetConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/SubsetConstraint2"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'EqualityConstraint1' (EqualityConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/EqualityConstraint1"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test18-RoleConstraint-Subset Constraint.fbm",
+      "output": "Test18-RoleConstraint-Subset Constraint.yaml",
+      "diagnostics": [
+        {
+          "code": "FBM_CONCEPT_NAME_COLLIDES_WITH_OSSIE",
+          "severity": "warning",
+          "message": "FBM object type 'Date' was exported as Ossie concept 'DateType' because its name is already reserved.",
+          "source_path": "value_types/Date"
+        },
+        {
+          "code": "FBM_VALUE_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Value constraints on 'Person was born' need Ossie requires parsing.",
+          "source_path": "value_types/Person was born/value_constraints"
+        },
+        {
+          "code": "FBM_OBJECTIFICATION_UNMAPPED",
+          "severity": "warning",
+          "message": "Objectification for 'Birth' was preserved as metadata.",
+          "source_path": "fact_types/Birth"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '102e4c77-b1d7-49df-b2f1-a06fbdaa080e' for fact type 'PersonHasPersonId' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonHasPersonId/readings/102e4c77-b1d7-49df-b2f1-a06fbdaa080e"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '911963b6-0775-4b6b-85df-e6269766b8af' for fact type 'BirthCertificateHasBirthCertificateNr' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/BirthCertificateHasBirthCertificateNr/readings/911963b6-0775-4b6b-85df-e6269766b8af"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '32e7e3d6-3a7e-4220-9144-4364deda8b1c' for fact type 'PersonBirth' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonBirth/readings/32e7e3d6-3a7e-4220-9144-4364deda8b1c"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'SubsetConstraint1' (SubsetConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/SubsetConstraint1"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'SubsetConstraint2' (SubsetConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/SubsetConstraint2"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'EqualityConstraint1' (EqualityConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/EqualityConstraint1"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test19-RoleConstraint-Join Subset Constraint.fbm",
+      "output": "Test19-RoleConstraint-Join Subset Constraint.yaml",
+      "diagnostics": [
+        {
+          "code": "FBM_CONCEPT_NAME_COLLIDES_WITH_OSSIE",
+          "severity": "warning",
+          "message": "FBM object type 'Date' was exported as Ossie concept 'DateType' because its name is already reserved.",
+          "source_path": "value_types/Date"
+        },
+        {
+          "code": "FBM_VALUE_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Value constraints on 'Person was born' need Ossie requires parsing.",
+          "source_path": "value_types/Person was born/value_constraints"
+        },
+        {
+          "code": "FBM_OBJECTIFICATION_UNMAPPED",
+          "severity": "warning",
+          "message": "Objectification for 'Birth' was preserved as metadata.",
+          "source_path": "fact_types/Birth"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '270618b5-819e-4894-b08b-d560155eaa52' for fact type 'PersonHasPersonId' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonHasPersonId/readings/270618b5-819e-4894-b08b-d560155eaa52"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'b6419160-3651-4462-9203-d85b397daeea' for fact type 'BirthCertificateHasBirthCertificateNr' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/BirthCertificateHasBirthCertificateNr/readings/b6419160-3651-4462-9203-d85b397daeea"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '9dd4298f-d7bc-4800-b013-87e5d3d92343' for fact type 'PersonBirth' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonBirth/readings/9dd4298f-d7bc-4800-b013-87e5d3d92343"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'SubsetConstraint1' (SubsetConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/SubsetConstraint1"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'SubsetConstraint2' (SubsetConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/SubsetConstraint2"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'EqualityConstraint1' (EqualityConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/EqualityConstraint1"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test20-nORMaDataTypes.fbm",
+      "output": "Test20-nORMaDataTypes.yaml",
+      "diagnostics": [
+        {
+          "code": "FBM_CONCEPT_NAME_COLLIDES_WITH_OSSIE",
+          "severity": "warning",
+          "message": "FBM object type 'Decimal' was exported as Ossie concept 'DecimalType' because its name is already reserved.",
+          "source_path": "value_types/Decimal"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test21-ObjectifiedFactType-Single.fbm",
+      "output": "Test21-ObjectifiedFactType-Single.yaml",
+      "diagnostics": [
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '5f728a8f-ebc8-4a54-b37f-1cb0155d96a4' for fact type 'CompanyHasCompanyId' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/CompanyHasCompanyId/readings/5f728a8f-ebc8-4a54-b37f-1cb0155d96a4"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '108b74d0-c3fc-4932-95bd-c03fa2033a74' for fact type 'SupplierHasSupplierId' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/SupplierHasSupplierId/readings/108b74d0-c3fc-4932-95bd-c03fa2033a74"
+        },
+        {
+          "code": "FBM_OBJECTIFICATION_UNMAPPED",
+          "severity": "warning",
+          "message": "Objectification for 'CompanyHasSupplier' was preserved as metadata.",
+          "source_path": "fact_types/CompanyHasSupplier"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '0dd0d218-db93-4662-a17c-e0a7a953a0a0' for fact type 'CompanyHasSupplier' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/CompanyHasSupplier/readings/0dd0d218-db93-4662-a17c-e0a7a953a0a0"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'c93aedf9-1c1b-4a82-99b3-13b48614d9e9' for fact type 'CompanyCompanyHasSupplier' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/CompanyCompanyHasSupplier/readings/c93aedf9-1c1b-4a82-99b3-13b48614d9e9"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '37358d26-0002-461e-8324-736ac44d35a1' for fact type 'SupplierCompanyHasSupplier' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/SupplierCompanyHasSupplier/readings/37358d26-0002-461e-8324-736ac44d35a1"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test22-ObjectifiedFactTypeWithAdjoinedFactType.fbm",
+      "output": "Test22-ObjectifiedFactTypeWithAdjoinedFactType.yaml",
+      "diagnostics": [
+        {
+          "code": "FBM_CONCEPT_NAME_COLLIDES_WITH_OSSIE",
+          "severity": "warning",
+          "message": "FBM object type 'Date' was exported as Ossie concept 'DateType' because its name is already reserved.",
+          "source_path": "value_types/Date"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '178ece6a-7e2e-4b4f-aeaf-f945d46d5561' for fact type 'SupplierHasSupplier_Id' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/SupplierHasSupplier_Id/readings/178ece6a-7e2e-4b4f-aeaf-f945d46d5561"
+        },
+        {
+          "code": "FBM_OBJECTIFICATION_UNMAPPED",
+          "severity": "warning",
+          "message": "Objectification for 'CompanyHasSupplier' was preserved as metadata.",
+          "source_path": "fact_types/CompanyHasSupplier"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '8a8b6705-9c42-401e-973f-e3178683e68f' for fact type 'CompanyHasSupplier' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/CompanyHasSupplier/readings/8a8b6705-9c42-401e-973f-e3178683e68f"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'c6b661f3-5156-4bf1-b88a-08de2b494484' for fact type 'CompanyHasCompany_Id' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/CompanyHasCompany_Id/readings/c6b661f3-5156-4bf1-b88a-08de2b494484"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'c5d9ec92-a63e-4a8e-bb9b-b1446eb9b2c8' for fact type 'CompanyCompanySupplier' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/CompanyCompanySupplier/readings/c5d9ec92-a63e-4a8e-bb9b-b1446eb9b2c8"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '8e43b26b-d55f-4126-952d-825b6d3608fa' for fact type 'SupplierCompanySupplier' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/SupplierCompanySupplier/readings/8e43b26b-d55f-4126-952d-825b6d3608fa"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test23-Pages-Multiple.fbm",
+      "output": "Test23-Pages-Multiple.yaml",
+      "diagnostics": [
+        {
+          "code": "FBM_CONCEPT_NAME_COLLIDES_WITH_OSSIE",
+          "severity": "warning",
+          "message": "FBM object type 'Date' was exported as Ossie concept 'DateType' because its name is already reserved.",
+          "source_path": "value_types/Date"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '178ece6a-7e2e-4b4f-aeaf-f945d46d5561' for fact type 'SupplierHasSupplier_Id' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/SupplierHasSupplier_Id/readings/178ece6a-7e2e-4b4f-aeaf-f945d46d5561"
+        },
+        {
+          "code": "FBM_OBJECTIFICATION_UNMAPPED",
+          "severity": "warning",
+          "message": "Objectification for 'CompanyHasSupplier' was preserved as metadata.",
+          "source_path": "fact_types/CompanyHasSupplier"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '8a8b6705-9c42-401e-973f-e3178683e68f' for fact type 'CompanyHasSupplier' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/CompanyHasSupplier/readings/8a8b6705-9c42-401e-973f-e3178683e68f"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'c6b661f3-5156-4bf1-b88a-08de2b494484' for fact type 'CompanyHasCompany_Id' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/CompanyHasCompany_Id/readings/c6b661f3-5156-4bf1-b88a-08de2b494484"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '8e43b26b-d55f-4126-952d-825b6d3608fa' for fact type 'SupplierCompanySupplier' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/SupplierCompanySupplier/readings/8e43b26b-d55f-4126-952d-825b6d3608fa"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'c5d9ec92-a63e-4a8e-bb9b-b1446eb9b2c8' for fact type 'CompanyCompanySupplier' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/CompanyCompanySupplier/readings/c5d9ec92-a63e-4a8e-bb9b-b1446eb9b2c8"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test24-RoleConstraint-ExternalUniquenessConstraint-AsPreferredIdentifier.fbm",
+      "output": "Test24-RoleConstraint-ExternalUniquenessConstraint-AsPreferredIdentifier.yaml",
+      "diagnostics": [
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '4ec95052-afff-4d90-872a-2d7313d68fa4' for fact type 'PersonHasPersonId' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonHasPersonId/readings/4ec95052-afff-4d90-872a-2d7313d68fa4"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test25-RoleConstraint-RingConstraint.fbm",
+      "output": "Test25-RoleConstraint-RingConstraint.yaml",
+      "diagnostics": [
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'cdd43208-6f25-4c4e-bd22-825ee46b3e66' for fact type 'PersonHasPersonId' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonHasPersonId/readings/cdd43208-6f25-4c4e-bd22-825ee46b3e66"
+        },
+        {
+          "code": "FBM_OBJECTIFICATION_UNMAPPED",
+          "severity": "warning",
+          "message": "Objectification for 'PersonIsParentOfPerson' was preserved as metadata.",
+          "source_path": "fact_types/PersonIsParentOfPerson"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '2d7f8cf7-8c3f-43db-abc3-8c801bfb70f5' for fact type 'PersonIsParentOfPerson' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonIsParentOfPerson/readings/2d7f8cf7-8c3f-43db-abc3-8c801bfb70f5"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'RingConstraint1' (RingConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/RingConstraint1"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test26-RoleConstraint-RoleValueConstraint.fbm",
+      "output": "Test26-RoleConstraint-RoleValueConstraint.yaml",
+      "diagnostics": [
+        {
+          "code": "FBM_OBJECTIFICATION_UNMAPPED",
+          "severity": "warning",
+          "message": "Objectification for 'StockedItem' was preserved as metadata.",
+          "source_path": "fact_types/StockedItem"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '06b45d43-4248-4b72-8add-6ded38a5b70c' for fact type 'WarehouseHasWarehouseName' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/WarehouseHasWarehouseName/readings/06b45d43-4248-4b72-8add-6ded38a5b70c"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'a3711e52-1e8b-480e-93b6-b3380597b2ce' for fact type 'PartHasPartNr' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PartHasPartNr/readings/a3711e52-1e8b-480e-93b6-b3380597b2ce"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'ef4ff20c-e6b7-46b9-a4fa-f6e1539f4eda' for fact type 'BinHasBinNr' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/BinHasBinNr/readings/ef4ff20c-e6b7-46b9-a4fa-f6e1539f4eda"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '3a5f8055-e3d0-4ce6-ac61-97ea16e63dfd' for fact type 'WarehouseStockedItem' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/WarehouseStockedItem/readings/3a5f8055-e3d0-4ce6-ac61-97ea16e63dfd"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '2cbb5997-0abc-497f-a1e7-00ba9e71bf4e' for fact type 'PartStockedItem' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PartStockedItem/readings/2cbb5997-0abc-497f-a1e7-00ba9e71bf4e"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '2394310c-d87f-47e6-a4a6-15c36817ad54' for fact type 'BinStockedItem' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/BinStockedItem/readings/2394310c-d87f-47e6-a4a6-15c36817ad54"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'RoleValueConstraint1' (RoleValueConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/RoleValueConstraint1"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test27-RoleConstraint-EqualityConstraint.fbm",
+      "output": "Test27-RoleConstraint-EqualityConstraint.yaml",
+      "diagnostics": [
+        {
+          "code": "FBM_CONCEPT_NAME_COLLIDES_WITH_OSSIE",
+          "severity": "warning",
+          "message": "FBM object type 'Date' was exported as Ossie concept 'DateType' because its name is already reserved.",
+          "source_path": "value_types/Date"
+        },
+        {
+          "code": "FBM_VALUE_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Value constraints on 'Person was born' need Ossie requires parsing.",
+          "source_path": "value_types/Person was born/value_constraints"
+        },
+        {
+          "code": "FBM_OBJECTIFICATION_UNMAPPED",
+          "severity": "warning",
+          "message": "Objectification for 'Birth' was preserved as metadata.",
+          "source_path": "fact_types/Birth"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'b2742a28-cd7d-480c-86b4-5229eeec06dc' for fact type 'PersonHasPersonId' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonHasPersonId/readings/b2742a28-cd7d-480c-86b4-5229eeec06dc"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '6cb2226c-2c53-47a9-a688-01edab2b648f' for fact type 'BirthCertificateHasBirthCertificateNr' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/BirthCertificateHasBirthCertificateNr/readings/6cb2226c-2c53-47a9-a688-01edab2b648f"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'e6e5b623-7e41-4ba7-a1a1-53429bd3c932' for fact type 'PersonBirth' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonBirth/readings/e6e5b623-7e41-4ba7-a1a1-53429bd3c932"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'SubsetConstraint1' (SubsetConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/SubsetConstraint1"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'SubsetConstraint2' (SubsetConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/SubsetConstraint2"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'EqualityConstraint1' (EqualityConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/EqualityConstraint1"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test28-RoleConstraint-SubsetConstraint.fbm",
+      "output": "Test28-RoleConstraint-SubsetConstraint.yaml",
+      "diagnostics": [
+        {
+          "code": "FBM_CONCEPT_NAME_COLLIDES_WITH_OSSIE",
+          "severity": "warning",
+          "message": "FBM object type 'Date' was exported as Ossie concept 'DateType' because its name is already reserved.",
+          "source_path": "value_types/Date"
+        },
+        {
+          "code": "FBM_VALUE_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Value constraints on 'Person was born' need Ossie requires parsing.",
+          "source_path": "value_types/Person was born/value_constraints"
+        },
+        {
+          "code": "FBM_OBJECTIFICATION_UNMAPPED",
+          "severity": "warning",
+          "message": "Objectification for 'Birth' was preserved as metadata.",
+          "source_path": "fact_types/Birth"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '7091079c-6b78-4e50-9ea4-64be8eca02e0' for fact type 'PersonHasPersonId' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonHasPersonId/readings/7091079c-6b78-4e50-9ea4-64be8eca02e0"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '431dc19b-b6b6-4153-9a97-462106424731' for fact type 'BirthCertificateHasBirthCertificateNr' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/BirthCertificateHasBirthCertificateNr/readings/431dc19b-b6b6-4153-9a97-462106424731"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '60aaa2e5-17a2-42e6-b06c-3723ff3627ed' for fact type 'PersonBirth' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonBirth/readings/60aaa2e5-17a2-42e6-b06c-3723ff3627ed"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'SubsetConstraint1' (SubsetConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/SubsetConstraint1"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'SubsetConstraint2' (SubsetConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/SubsetConstraint2"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'EqualityConstraint1' (EqualityConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/EqualityConstraint1"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test29-RoleConstraint-JoinSubsetConstraint.fbm",
+      "output": "Test29-RoleConstraint-JoinSubsetConstraint.yaml",
+      "diagnostics": [
+        {
+          "code": "FBM_CONCEPT_NAME_COLLIDES_WITH_OSSIE",
+          "severity": "warning",
+          "message": "FBM object type 'Date' was exported as Ossie concept 'DateType' because its name is already reserved.",
+          "source_path": "value_types/Date"
+        },
+        {
+          "code": "FBM_VALUE_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Value constraints on 'Person was born' need Ossie requires parsing.",
+          "source_path": "value_types/Person was born/value_constraints"
+        },
+        {
+          "code": "FBM_OBJECTIFICATION_UNMAPPED",
+          "severity": "warning",
+          "message": "Objectification for 'Birth' was preserved as metadata.",
+          "source_path": "fact_types/Birth"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '8aa2df3b-e0fd-47dd-b5e1-7fab90733734' for fact type 'PersonHasPersonId' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonHasPersonId/readings/8aa2df3b-e0fd-47dd-b5e1-7fab90733734"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'c0e968c0-a37e-462a-85fb-b8e54713288e' for fact type 'BirthCertificateHasBirthCertificateNr' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/BirthCertificateHasBirthCertificateNr/readings/c0e968c0-a37e-462a-85fb-b8e54713288e"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '0b131ce4-74e6-4266-aec6-92d36bad6300' for fact type 'PersonBirth' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonBirth/readings/0b131ce4-74e6-4266-aec6-92d36bad6300"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'SubsetConstraint1' (SubsetConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/SubsetConstraint1"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'SubsetConstraint2' (SubsetConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/SubsetConstraint2"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'EqualityConstraint1' (EqualityConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/EqualityConstraint1"
+        }
+      ]
+    },
+    {
+      "source": "Boston/Test30-RoleConstraint-JoinSubsetConstraint-CinemaBookings-NORMACreatedSubsetConstraint.fbm",
+      "output": "Test30-RoleConstraint-JoinSubsetConstraint-CinemaBookings-NORMACreatedSubsetConstraint.yaml",
+      "diagnostics": [
+        {
+          "code": "FBM_CONCEPT_NAME_COLLIDES_WITH_OSSIE",
+          "severity": "warning",
+          "message": "FBM object type 'DateTime' was exported as Ossie concept 'DateTimeType' because its name is already reserved.",
+          "source_path": "value_types/DateTime"
+        },
+        {
+          "code": "FBM_OBJECTIFICATION_UNMAPPED",
+          "severity": "warning",
+          "message": "Objectification for 'Session' was preserved as metadata.",
+          "source_path": "fact_types/Session"
+        },
+        {
+          "code": "FBM_OBJECTIFICATION_UNMAPPED",
+          "severity": "warning",
+          "message": "Objectification for 'Booking' was preserved as metadata.",
+          "source_path": "fact_types/Booking"
+        },
+        {
+          "code": "FBM_OBJECTIFICATION_UNMAPPED",
+          "severity": "warning",
+          "message": "Objectification for 'SeatIsForBooking' was preserved as metadata.",
+          "source_path": "fact_types/SeatIsForBooking"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '8cdfab20-835e-4e7c-9de5-e7eed69295c8' for fact type 'SeatIsForBooking' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/SeatIsForBooking/readings/8cdfab20-835e-4e7c-9de5-e7eed69295c8"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '1be74f5e-dcdf-43fb-9973-9b992e055579' for fact type 'SeatHasLetter' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/SeatHasLetter/readings/1be74f5e-dcdf-43fb-9973-9b992e055579"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '7643f19f-0cc7-48af-ae70-f290b50d5de0' for fact type 'CinemaContainsRow' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/CinemaContainsRow/readings/7643f19f-0cc7-48af-ae70-f290b50d5de0"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'e55be414-52f0-4423-b12f-b123b0aa4e2e' for fact type 'PersonHasPersonId' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonHasPersonId/readings/e55be414-52f0-4423-b12f-b123b0aa4e2e"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '00a3cfbb-6fdd-4072-922d-24a69c6dc8c1' for fact type 'FilmIdIsOfFilm' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/FilmIdIsOfFilm/readings/00a3cfbb-6fdd-4072-922d-24a69c6dc8c1"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'd066683c-986d-4fb7-8bd7-4e0852ef41a5' for fact type 'CinemaIdIsOfCinema' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/CinemaIdIsOfCinema/readings/d066683c-986d-4fb7-8bd7-4e0852ef41a5"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '6bd834cd-7826-4c8b-8fb9-12e2e401db20' for fact type 'SeatIsInRow' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/SeatIsInRow/readings/6bd834cd-7826-4c8b-8fb9-12e2e401db20"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '25c5776f-5ae7-4de1-a7ec-2e4975f3cfbb' for fact type 'SessionBooking' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/SessionBooking/readings/25c5776f-5ae7-4de1-a7ec-2e4975f3cfbb"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '9ea4db3f-d928-4a34-bf3f-a9c07ac9bf49' for fact type 'DateTimeSession' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/DateTimeSession/readings/9ea4db3f-d928-4a34-bf3f-a9c07ac9bf49"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '6fee7462-1451-463f-b0ef-d91a269cee67' for fact type 'CinemaSession' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/CinemaSession/readings/6fee7462-1451-463f-b0ef-d91a269cee67"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading 'fbe141ba-d4f5-477e-b8ad-ddb20c307437' for fact type 'FilmSession' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/FilmSession/readings/fbe141ba-d4f5-477e-b8ad-ddb20c307437"
+        },
+        {
+          "code": "OSSIE_RUNTIME_READING_SEQUENCE_LIMITATION",
+          "severity": "info",
+          "message": "Reading '30593ee7-7ef3-439f-8f8c-31ccb162813d' for fact type 'PersonBooking' uses a role sequence that Apache's current Python relationship parser rejects. It is still emitted in the document's verbalizes collection.",
+          "source_path": "fact_types/PersonBooking/readings/30593ee7-7ef3-439f-8f8c-31ccb162813d"
+        },
+        {
+          "code": "FBM_CONSTRAINT_UNMAPPED",
+          "severity": "warning",
+          "message": "Constraint 'SubsetConstraint1' (SubsetConstraint) was preserved as metadata.",
+          "source_path": "role_constraints/SubsetConstraint1"
+        }
+      ]
+    }
+  ]
+}

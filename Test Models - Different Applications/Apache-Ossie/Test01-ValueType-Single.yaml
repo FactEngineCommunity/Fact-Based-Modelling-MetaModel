@@ -1,0 +1,7 @@
+version: 0.2.0.dev0
+name: Test01-ValueType-Single
+ontology:
+- concept: NewValueType
+  type: ValueType
+  extends:
+  - String

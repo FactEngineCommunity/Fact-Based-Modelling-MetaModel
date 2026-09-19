@@ -1,0 +1,42 @@
+version: 0.2.0.dev0
+name: Test15-RoleConstraint-RingConstraint
+ontology:
+- concept: Person_Id
+  type: ValueType
+  extends:
+  - Integer
+- concept: Person
+  type: EntityType
+  identify_by:
+  - PersonHasPersonId
+  relationships:
+  - name: PersonIsParentOfPerson
+    roles:
+    - concept: Person
+    verbalizes:
+    - '{Person} is parent of {Person}'
+    - '{Person} is child of {Person}'
+  - name: PersonHasPersonId
+    roles:
+    - concept: Person_Id
+    verbalizes:
+    - '{Person} has {Person_Id}'
+    - '{Person_Id} is of {Person}'
+    multiplicity: OneToOne
+- concept: PersonIsParentOfPerson
+  type: EntityType
+  relationships:
+  - name: PersonPersonIsParentOfPerson
+    roles:
+    - concept: Person
+    verbalizes:
+    - '{PersonIsParentOfPerson} involves {Person}'
+    - '{Person} is involved in {PersonIsParentOfPerson}'
+    multiplicity: ManyToOne
+  - name: PersonPersonIsParentOfPerson1
+    roles:
+    - concept: Person
+    verbalizes:
+    - '{PersonIsParentOfPerson} involves {Person}'
+    - '{Person} is involved in {PersonIsParentOfPerson}'
+    multiplicity: ManyToOne

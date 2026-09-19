@@ -1,0 +1,158 @@
+version: 0.2.0.dev0
+name: Test30-RoleConstraint-JoinSubsetConstraint-CinemaBookings-NORMACreatedSubsetConstraint
+ontology:
+- concept: Cinema_Id
+  type: ValueType
+  extends:
+  - Integer
+- concept: DateTimeType
+  type: ValueType
+  extends:
+  - DateTime
+- concept: Film_Id
+  type: ValueType
+  extends:
+  - Integer
+- concept: Letter
+  type: ValueType
+  extends:
+  - String
+  relationships:
+  - name: SeatHasLetter
+    roles:
+    - concept: Seat
+    verbalizes:
+    - '{Seat} has {Letter}'
+- concept: Person_Id
+  type: ValueType
+  extends:
+  - Integer
+- concept: RowNr
+  type: ValueType
+  extends:
+  - String
+- concept: Cinema
+  type: EntityType
+  identify_by:
+  - CinemaIdIsOfCinema
+  relationships:
+  - name: CinemaContainsRow
+    roles:
+    - concept: Row
+    verbalizes:
+    - '{Cinema} contains {Row}'
+    - '{Row} is in {Cinema}'
+  - name: CinemaIdIsOfCinema
+    roles:
+    - concept: Cinema_Id
+    verbalizes:
+    - '{Cinema_Id} is of {Cinema}'
+    - '{Cinema} has {Cinema_Id}'
+    multiplicity: OneToOne
+- concept: Film
+  type: EntityType
+  identify_by:
+  - FilmIdIsOfFilm
+  relationships:
+  - name: Session
+    roles:
+    - concept: DateTimeType
+    - concept: Cinema
+    verbalizes:
+    - '{Film} is showing on {DateTimeType} at {Cinema}'
+  - name: FilmIdIsOfFilm
+    roles:
+    - concept: Film_Id
+    verbalizes:
+    - '{Film_Id} is of {Film}'
+    - '{Film} has {Film_Id}'
+    multiplicity: OneToOne
+- concept: Person
+  type: EntityType
+  identify_by:
+  - PersonHasPersonId
+  relationships:
+  - name: Booking
+    roles:
+    - concept: Session
+    verbalizes:
+    - '{Person} booked {Session}'
+  - name: PersonHasPersonId
+    roles:
+    - concept: Person_Id
+    verbalizes:
+    - '{Person} has {Person_Id}'
+    - '{Person_Id} is of {Person}'
+    multiplicity: OneToOne
+- concept: Row
+  type: EntityType
+  identify_by:
+  - CinemaContainsRow
+  - RowHasRowNr
+  relationships:
+  - name: RowHasRowNr
+    roles:
+    - concept: RowNr
+    verbalizes:
+    - '{Row} has {RowNr}'
+    multiplicity: ManyToOne
+  - name: SeatIsInRow
+    roles:
+    - concept: Seat
+    verbalizes:
+    - '{Seat} is in {Row}'
+    - '{Row} contains {Seat}'
+- concept: Seat
+  type: EntityType
+  identify_by:
+  - SeatIsInRow
+  - SeatHasLetter
+- concept: Session
+  type: EntityType
+  relationships:
+  - name: DateTimeSession
+    roles:
+    - concept: DateTimeType
+    verbalizes:
+    - '{Session} involves {DateTimeType}'
+    - '{DateTimeType} is involved in {Session}'
+    multiplicity: ManyToOne
+  - name: CinemaSession
+    roles:
+    - concept: Cinema
+    verbalizes:
+    - '{Session} involves {Cinema}'
+    - '{Cinema} is involved in {Session}'
+    multiplicity: ManyToOne
+  - name: FilmSession
+    roles:
+    - concept: Film
+    verbalizes:
+    - '{Session} involves {Film}'
+    - '{Film} is involved in {Session}'
+    multiplicity: ManyToOne
+- concept: Booking
+  type: EntityType
+  relationships:
+  - name: SeatIsForBooking
+    roles:
+    - concept: Seat
+    verbalizes:
+    - '{Seat} is for {Booking}'
+    - '{Booking} has {Seat}'
+  - name: SessionBooking
+    roles:
+    - concept: Session
+    verbalizes:
+    - '{Booking} involves {Session}'
+    - '{Session} is involved in {Booking}'
+    multiplicity: ManyToOne
+  - name: PersonBooking
+    roles:
+    - concept: Person
+    verbalizes:
+    - '{Booking} involves {Person}'
+    - '{Person} is involved in {Booking}'
+    multiplicity: ManyToOne
+- concept: SeatIsForBooking
+  type: EntityType

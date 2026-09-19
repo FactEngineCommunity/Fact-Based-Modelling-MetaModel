@@ -1,0 +1,91 @@
+version: 0.2.0.dev0
+name: Test16-RoleConstraint-RoleValueConstraint
+ontology:
+- concept: Bin_Nr
+  type: ValueType
+  extends:
+  - Integer
+- concept: Part_Nr
+  type: ValueType
+  extends:
+  - Integer
+- concept: Quantity
+  type: ValueType
+  extends:
+  - String
+- concept: Warehouse_Name
+  type: ValueType
+  extends:
+  - String
+- concept: Bin
+  type: EntityType
+  identify_by:
+  - BinHasBinNr
+  relationships:
+  - name: BinHasBinNr
+    roles:
+    - concept: Bin_Nr
+    verbalizes:
+    - '{Bin} has {Bin_Nr}'
+    - '{Bin_Nr} is of {Bin}'
+    multiplicity: OneToOne
+- concept: Part
+  type: EntityType
+  identify_by:
+  - PartHasPartNr
+  relationships:
+  - name: StockedItem
+    roles:
+    - concept: Bin
+    - concept: Warehouse
+    verbalizes:
+    - '{Part} is in {Bin} in {Warehouse}'
+  - name: PartHasPartNr
+    roles:
+    - concept: Part_Nr
+    verbalizes:
+    - '{Part} has {Part_Nr}'
+    - '{Part_Nr} is of {Part}'
+    multiplicity: OneToOne
+- concept: StockedItem
+  type: EntityType
+  relationships:
+  - name: StockedItemIsInQuantity
+    roles:
+    - concept: Quantity
+    verbalizes:
+    - '{StockedItem} is in {Quantity}'
+    multiplicity: ManyToOne
+  - name: PartStockedItem
+    roles:
+    - concept: Part
+    verbalizes:
+    - '{StockedItem} involves {Part}'
+    - '{Part} is involved in {StockedItem}'
+    multiplicity: ManyToOne
+  - name: BinStockedItem
+    roles:
+    - concept: Bin
+    verbalizes:
+    - '{StockedItem} involves {Bin}'
+    - '{Bin} is involved in {StockedItem}'
+    multiplicity: ManyToOne
+  - name: WarehouseStockedItem
+    roles:
+    - concept: Warehouse
+    verbalizes:
+    - '{StockedItem} involves {Warehouse}'
+    - '{Warehouse} is involved in {StockedItem}'
+    multiplicity: ManyToOne
+- concept: Warehouse
+  type: EntityType
+  identify_by:
+  - WarehouseHasWarehouseName
+  relationships:
+  - name: WarehouseHasWarehouseName
+    roles:
+    - concept: Warehouse_Name
+    verbalizes:
+    - '{Warehouse} has {Warehouse_Name}'
+    - '{Warehouse_Name} is of {Warehouse}'
+    multiplicity: OneToOne

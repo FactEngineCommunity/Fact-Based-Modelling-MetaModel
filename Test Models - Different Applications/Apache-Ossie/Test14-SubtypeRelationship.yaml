@@ -1,0 +1,23 @@
+version: 0.2.0.dev0
+name: Test14-SubtypeRelationship
+ontology:
+- concept: Person_Id
+  type: ValueType
+  extends:
+  - Float
+- concept: Employee
+  type: EntityType
+  extends:
+  - Person
+- concept: Person
+  type: EntityType
+  identify_by:
+  - PersonHasPersonId
+  relationships:
+  - name: PersonHasPersonId
+    roles:
+    - concept: Person_Id
+    verbalizes:
+    - '{Person} has {Person_Id}'
+    - '{Person_Id} is of {Person}'
+    multiplicity: OneToOne

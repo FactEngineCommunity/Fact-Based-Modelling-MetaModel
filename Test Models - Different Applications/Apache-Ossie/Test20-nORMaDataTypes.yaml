@@ -1,0 +1,91 @@
+version: 0.2.0.dev0
+name: Test20-nORMaDataTypes
+ontology:
+- concept: DecimalType
+  type: ValueType
+  extends:
+  - Decimal
+- concept: 'Logical: True False'
+  type: ValueType
+  extends:
+  - Boolean
+- concept: 'Logical: Yes No'
+  type: ValueType
+  extends:
+  - Boolean
+- concept: Numeric Float (Double Precision)
+  type: ValueType
+  extends:
+  - Float
+- concept: Numeric Float (Single Precision)
+  type: ValueType
+  extends:
+  - Float
+- concept: Numeric Signed small Integer
+  type: ValueType
+  extends:
+  - Integer
+- concept: Numeric unsigned tiny integer
+  type: ValueType
+  extends:
+  - Integer
+- concept: 'Numeric: AutoCounter'
+  type: ValueType
+  extends:
+  - Integer
+- concept: 'Numeric: Float (Custom Precision)'
+  type: ValueType
+  extends:
+  - Float
+- concept: 'Numeric: Money'
+  type: ValueType
+  extends:
+  - Decimal
+- concept: 'Numeric: Signed Big Integer'
+  type: ValueType
+  extends:
+  - Integer
+- concept: 'Numerkc: Signed Integer'
+  type: ValueType
+  extends:
+  - Integer
+- concept: 'Other: Object Id'
+  type: ValueType
+- concept: Raw Data Fixed Length
+  type: ValueType
+- concept: Raw Data Large Length
+  type: ValueType
+- concept: Raw Data OLE Object
+  type: ValueType
+- concept: 'Raw Data: Picture'
+  type: ValueType
+- concept: 'Raw Data: Variable Length'
+  type: ValueType
+- concept: Row Id
+  type: ValueType
+- concept: 'Temporal: Auto Timestamp'
+  type: ValueType
+- concept: 'Temporal: Date'
+  type: ValueType
+  extends:
+  - Date
+- concept: 'Temporal: Date & Time'
+  type: ValueType
+  extends:
+  - DateTime
+- concept: 'Temporal: Time'
+  type: ValueType
+  extends:
+  - DateTime
+- concept: 'Text: Fixed Length'
+  type: ValueType
+  extends:
+  - String
+- concept: 'Text: Large Length'
+  type: ValueType
+  extends:
+  - String
+- concept: 'Text: Variable Length'
+  type: ValueType
+  extends:
+  - String

@@ -1,0 +1,7 @@
+version: 0.2.0.dev0
+name: Test04-ValueType-Single-WithDataTypeDataTypePrecision
+ontology:
+- concept: NewValueType
+  type: ValueType
+  extends:
+  - Float

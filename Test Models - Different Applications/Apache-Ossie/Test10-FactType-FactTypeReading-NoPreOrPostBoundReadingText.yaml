@@ -1,0 +1,29 @@
+version: 0.2.0.dev0
+name: Test10-FactType-FactTypeReading-NoPreOrPostBoundReadingText
+ontology:
+- concept: Name
+  type: ValueType
+  extends:
+  - String
+- concept: Person_Id
+  type: ValueType
+  extends:
+  - Float
+- concept: Person
+  type: EntityType
+  identify_by:
+  - PersonHasPersonId
+  relationships:
+  - name: PersonHasName
+    roles:
+    - concept: Name
+    verbalizes:
+    - '{Person} has {Name}'
+    multiplicity: ManyToOne
+  - name: PersonHasPersonId
+    roles:
+    - concept: Person_Id
+    verbalizes:
+    - '{Person} has {Person_Id}'
+    - '{Person_Id} is of {Person}'
+    multiplicity: OneToOne

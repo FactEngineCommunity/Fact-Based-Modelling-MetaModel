@@ -1,0 +1,58 @@
+version: 0.2.0.dev0
+name: Test21-ObjectifiedFactType-Single
+ontology:
+- concept: Company_Id
+  type: ValueType
+  extends:
+  - Integer
+- concept: Supplier_Id
+  type: ValueType
+  extends:
+  - Integer
+- concept: Company
+  type: EntityType
+  identify_by:
+  - CompanyHasCompanyId
+  relationships:
+  - name: CompanyHasCompanyId
+    roles:
+    - concept: Company_Id
+    verbalizes:
+    - '{Company} has {Company_Id}'
+    - '{Company_Id} is of {Company}'
+    multiplicity: OneToOne
+  - name: CompanyHasSupplier
+    roles:
+    - concept: Supplier
+    verbalizes:
+    - '{Company} has {Supplier}'
+    - '{Supplier} is for {Company}'
+- concept: Supplier
+  type: EntityType
+  identify_by:
+  - SupplierHasSupplierId
+  relationships:
+  - name: SupplierHasSupplierId
+    roles:
+    - concept: Supplier_Id
+    verbalizes:
+    - '{Supplier} has {Supplier_Id}'
+    - '{Supplier_Id} is of {Supplier}'
+    multiplicity: OneToOne
+- concept: CompanyHasSupplier
+  type: EntityType
+  relationships:
+  - name: CompanyCompanyHasSupplier
+    roles:
+    - concept: Company
+    verbalizes:
+    - '{CompanyHasSupplier} involves {Company}'
+    - '{Company} is involved in {CompanyHasSupplier}'
+    multiplicity: ManyToOne
+  - name: SupplierCompanyHasSupplier
+    roles:
+    - concept: Supplier
+    verbalizes:
+    - '{CompanyHasSupplier} involves {Supplier}'
+    - '{Supplier} is involved in {CompanyHasSupplier}'
+    multiplicity: ManyToOne

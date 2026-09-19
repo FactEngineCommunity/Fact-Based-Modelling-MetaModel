@@ -1,0 +1,17 @@
+version: 0.2.0.dev0
+name: Test06-EntityType-Single-WithReferenceModeNoDataType
+ontology:
+- concept: NewEntityType1_Id
+  type: ValueType
+- concept: NewEntityType1
+  type: EntityType
+  identify_by:
+  - NewEntityType1HasNewEntityType1Id
+  relationships:
+  - name: NewEntityType1HasNewEntityType1Id
+    roles:
+    - concept: NewEntityType1_Id
+    verbalizes:
+    - '{NewEntityType1} has {NewEntityType1_Id}'
+    - '{NewEntityType1_Id} is of {NewEntityType1}'
+    multiplicity: OneToOne

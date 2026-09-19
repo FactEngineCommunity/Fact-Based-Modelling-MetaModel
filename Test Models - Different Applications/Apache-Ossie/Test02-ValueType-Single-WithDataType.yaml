@@ -1,0 +1,7 @@
+version: 0.2.0.dev0
+name: Test02-ValueType-Single-WithDataType
+ontology:
+- concept: NewValueType
+  type: ValueType
+  extends:
+  - Integer

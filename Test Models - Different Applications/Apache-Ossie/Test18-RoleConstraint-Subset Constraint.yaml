@@ -1,0 +1,84 @@
+version: 0.2.0.dev0
+name: Test18-RoleConstraint-Subset Constraint
+ontology:
+- concept: Birth Certificate_Nr
+  type: ValueType
+  extends:
+  - Integer
+- concept: DateType
+  type: ValueType
+  extends:
+  - Date
+- concept: Person was born
+  type: ValueType
+  extends:
+  - Boolean
+- concept: Person_Id
+  type: ValueType
+  extends:
+  - Integer
+- concept: Registered Name
+  type: ValueType
+  extends:
+  - String
+- concept: Birth Certificate
+  type: EntityType
+  identify_by:
+  - BirthCertificateHasBirthCertificateNr
+  relationships:
+  - name: BirthCertificateHasRegisteredName
+    roles:
+    - concept: Registered Name
+    verbalizes:
+    - '{Birth Certificate} has {Registered Name}'
+    multiplicity: ManyToOne
+  - name: BirthCertificateHasBirthCertificateNr
+    roles:
+    - concept: Birth Certificate_Nr
+    verbalizes:
+    - '{Birth Certificate} has {Birth Certificate_Nr}'
+    - '{Birth Certificate_Nr} is of {Birth Certificate}'
+    multiplicity: OneToOne
+- concept: Person
+  type: EntityType
+  identify_by:
+  - PersonHasPersonId
+  relationships:
+  - name: Birth
+    verbalizes:
+    - '{Person} was born'
+  - name: PersonHasPersonId
+    roles:
+    - concept: Person_Id
+    verbalizes:
+    - '{Person} has {Person_Id}'
+    - '{Person_Id} is of {Person}'
+    multiplicity: OneToOne
+  - name: PersonHasBirthCertificate
+    roles:
+    - concept: Birth Certificate
+    verbalizes:
+    - '{Person} has {Birth Certificate}'
+    multiplicity: ManyToOne
+  - name: PersonHasRegisteredName
+    roles:
+    - concept: Registered Name
+    verbalizes:
+    - '{Person} has {Registered Name}'
+    multiplicity: ManyToOne
+- concept: Birth
+  type: EntityType
+  relationships:
+  - name: BirthWasOnDate
+    roles:
+    - concept: DateType
+    verbalizes:
+    - '{Birth} was on {DateType}'
+    multiplicity: ManyToOne
+  - name: PersonBirth
+    roles:
+    - concept: Person
+    verbalizes:
+    - '{Birth} involves {Person}'
+    - '{Person} is involved in {Birth}'
+    multiplicity: ManyToOne
